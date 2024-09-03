@@ -44,7 +44,7 @@ finances = {
 # })
 data_frame = pd.DataFrame(data)
 
-data_frame
+st.dataframe(data_frame, hide_index=True)
 
 st.bar_chart(data=data_frame,x="name",x_label="Stock",y="units",y_label="Items", horizontal=True)
 
