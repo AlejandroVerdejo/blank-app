@@ -29,7 +29,7 @@ data = [
     },
     {
         "name":"p3",
-        "units":-3,
+        "units":23,
         "price":80,
         "restock":5
     }    
