@@ -15,6 +15,7 @@ def tostada():
 
 st.markdown("# Main pages")
 # st.sidebar.markdown("# Main page")
+st.sidebar.title("Main page")
 
 # st.Page(title="Main page")
 
