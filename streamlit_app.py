@@ -38,13 +38,15 @@ finances = {
     }          
 }
 
-# df = pd.DataFrame({
+# data_frame = pd.DataFrame({
 #     "first column":[1,2,3,4],
 #     "second column":[10,20,30,40]
 # })
-df = pd.DataFrame(data)
+data_frame = pd.DataFrame(data)
 
-df
+data_frame
+
+st.bar_chart(data=data_frame)
 
 chart_data = pd.DataFrame(
     finances
