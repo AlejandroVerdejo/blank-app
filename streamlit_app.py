@@ -20,8 +20,8 @@ data = [
     }    
 ]
 
-df = pd.DataFrame({
+df = pd.DataFrame(
     data
-})
+)
 
 df
