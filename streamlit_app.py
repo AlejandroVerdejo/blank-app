@@ -72,7 +72,8 @@ if count > 0:
     st.warning(f"Hay {count} elementos por debajo del numero de restock")
 
 st.altair_chart(
-    alt.Chart(data_frame).mark_bar(orient="horizontal").encode(alt.X(title="Units"),x="units",y="name")
+    # alt.Chart(data_frame).mark_bar(orient="horizontal").encode(x="units",y="name")
+    alt.Chart(data_frame).mark_bar(orient="horizontal").encode(alt.X("units",title="Units"),alt.Y("name",title="Name"))
     +alt.Chart(data_frame).mark_point(shape="diamond",filled=True,size=50,color="red",opacity=1).encode(x="restock",y="name"),use_container_width=True
     )
 
