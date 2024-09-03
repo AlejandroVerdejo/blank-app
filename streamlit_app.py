@@ -48,7 +48,7 @@ st.dataframe(data_frame,hide_index=True, width=1000)
 st.bar_chart(data=data_frame,x="name",x_label="Stock",y="units",y_label="Items", horizontal=True)
 
 chart_data = pd.DataFrame(
-    finances,
+    finances
     #  np.random.randn(20, 3),
     #  columns=['a', 'b', 'c']
     )
