@@ -1,5 +1,6 @@
 import streamlit as st
 import pandas as pd
+import numpy as np
 
 st.markdown("# Main page 🎈")
 # st.sidebar.markdown("# Main page 🎈")
@@ -29,3 +30,9 @@ data = [
 df = pd.DataFrame(data)
 
 df
+
+chart_data = pd.DataFrame(
+     np.random.randn(20, 3),
+     columns=['a', 'b', 'c'])
+
+st.line_chart(chart_data)
