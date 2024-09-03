@@ -92,6 +92,8 @@ st.altair_chart(
     +alt.Chart(data_frame).mark_point(shape="diamond",filled=True,size=50,color="red",opacity=1).encode(x="restock",y="name"),use_container_width=True
     )
 
+tab1,tab2 = st.tabs(["Ingresos","Gastos"])
+
 chart_data = pd.DataFrame(
     finances
     #  np.random.randn(20, 3),
