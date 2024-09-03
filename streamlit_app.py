@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 
-# @st.dialog("Cast your vote")
+@st.dialog(""" "Cast your vote" """)
 def vote():
     st.write(f"Why is your favorite?")
     reason = st.text_input("Because...")
