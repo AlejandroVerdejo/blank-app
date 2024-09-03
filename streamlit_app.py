@@ -65,6 +65,9 @@ col2.button("Tostada",on_click=tostada,use_container_width=True)
 #     "first column":[1,2,3,4],
 #     "second column":[10,20,30,40]
 # })
+
+st.header("Inventario")
+
 data_frame = pd.DataFrame(data)
 
 st.dataframe(data_frame,hide_index=True, use_container_width=True,column_config={
