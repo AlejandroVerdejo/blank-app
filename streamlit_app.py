@@ -64,7 +64,7 @@ col2.button("Back",use_container_width=True)
 # })
 data_frame = pd.DataFrame(data)
 
-st.dataframe(data_frame,hide_index=True, width=1000)
+st.dataframe(data_frame,hide_index=True, use_container_width=True)
 
 # st.bar_chart(data=data_frame,x="name",x_label="Stock",y="units",y_label="Items", horizontal=True)
 
