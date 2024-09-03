@@ -70,6 +70,7 @@ st.dataframe(data_frame,hide_index=True, use_container_width=True,column_config=
     "price":"Precio",
     "restock":"Restock"
 })
+st.table(data_frame)
 
 # st.bar_chart(data=data_frame,x="name",x_label="Stock",y="units",y_label="Items", horizontal=True)
 
