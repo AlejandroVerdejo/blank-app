@@ -51,6 +51,11 @@ finances = {
     }          
 }
 
+col1,col2 = st.columns(2)
+
+col1.button("Click",on_click=vote)
+col2.button("Back")
+
 click = st.button("Click",on_click=vote)
 
 # data_frame = pd.DataFrame({
