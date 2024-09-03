@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
+import altair as alt
 
 @st.dialog("Cast your vote")
 def vote():
@@ -61,6 +62,8 @@ data_frame = pd.DataFrame(data)
 st.dataframe(data_frame,hide_index=True, width=1000)
 
 st.bar_chart(data=data_frame,x="name",x_label="Stock",y="units",y_label="Items", horizontal=True)
+
+st.altair_chart(alt.Chart(data_frame).mark_bar(orient="horizontal").encode(x="units",y="name"))
 
 chart_data = pd.DataFrame(
     finances
