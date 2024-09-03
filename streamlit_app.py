@@ -14,6 +14,7 @@ def tostada():
     st.toast("Tostada")
 
 st.title("New app")
+st.set_page_config(page_title="Main")
 # st.sidebar.title("Main page")
 
 # st.markdown("")
