@@ -13,12 +13,17 @@ def vote():
 def tostada():
     st.toast("Tostada")
 
-st.markdown("# Main pages")
+# st.markdown("# Main pages")
 # st.sidebar.markdown("# Main page")
 
 # st.Page(title="Main page")
 
 st.title("New app")
+
+pg = st.navigation([
+    st.Page("pages/page1.py", title="First page", icon="🔥"),
+    st.Page("steamlit_app.py", title="Second page", icon=":material/favorite:"),
+])
 
 data = [
     {
