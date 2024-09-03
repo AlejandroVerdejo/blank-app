@@ -69,7 +69,10 @@ for i in data:
         count += 1
 
 if count > 0:
-    st.warning(f"Hay {count} elementos por debajo del numero de restock")
+    if count == 1:
+        st.warning(f"Hay {count} elemento por debajo del numero de restock")
+    else:
+        st.warning(f"Hay {count} elementos por debajo del numero de restock")
 
 st.altair_chart(
     # alt.Chart(data_frame).mark_bar(orient="horizontal").encode(x="units",y="name")
