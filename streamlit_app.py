@@ -51,7 +51,7 @@ finances = {
     }          
 }
 
-col1,col2 = st.columns(4)
+col1,col2,col3,col4 = st.columns(4)
 
 col1.button("Click",on_click=vote)
 col2.button("Back")
