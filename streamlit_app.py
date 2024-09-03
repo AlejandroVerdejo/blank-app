@@ -12,15 +12,14 @@ def vote():
 
 def tostada():
     st.toast("Tostada")
-    
+
+st.title("New app")
 st.sidebar.title("Main page")
 
 st.markdown("# Main pages")
 # st.sidebar.markdown("# Main page")
 
 # st.Page(title="Main page")
-
-st.title("New app")
 
 data = [
     {
