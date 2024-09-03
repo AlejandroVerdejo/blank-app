@@ -53,8 +53,8 @@ finances = {
 
 col1,col2,col3,col4 = st.columns(4)
 
-col1.button("Click",on_click=vote)
-col2.button("Back")
+col1.button("Click",on_click=vote,use_container_width=True)
+col2.button("Back",use_container_width=True)
 
 # click = st.button("Click",on_click=vote)
 
