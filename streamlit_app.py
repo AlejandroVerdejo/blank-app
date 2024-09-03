@@ -11,14 +11,14 @@ st.write(
 
 data = [
     {
-        "name":"K",
-        "age":20,
-        "direction":"adgah@aflgah.as"
+        "name":"p1",
+        "units":20,
+        "price":7
     },
     {
-        "name":"K",
-        "age":33,
-        "direction":"adgah@aflgah.as"
+        "name":"p2",
+        "units":33,
+        "price":13
     }    
 ]
 
