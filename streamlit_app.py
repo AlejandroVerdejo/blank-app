@@ -12,10 +12,11 @@ def vote():
 
 def tostada():
     st.toast("Tostada")
+    
+st.sidebar.title("Main page")
 
 st.markdown("# Main pages")
 # st.sidebar.markdown("# Main page")
-st.sidebar.title("Main page")
 
 # st.Page(title="Main page")
 
