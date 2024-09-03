@@ -26,6 +26,12 @@ data = [
         "units":33,
         "price":13,
         "restock":15
+    },
+    {
+        "name":"p3",
+        "units":-3,
+        "price":80,
+        "restock":5
     }    
 ]
 
