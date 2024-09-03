@@ -65,7 +65,7 @@ st.dataframe(data_frame,hide_index=True, width=1000)
 
 count = 0
 for i in data:
-    if i["restock"] < i["units"]:
+    if i["restock"] > i["units"]:
         count += 1
 
 if count > 0:
