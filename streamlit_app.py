@@ -95,7 +95,7 @@ st.altair_chart(
     +alt.Chart(data_frame).mark_point(shape="diamond",filled=True,size=50,color="red",opacity=1).encode(x="restock",y="name"),use_container_width=True
     )
 
-st.subheader("Finanzas")
+st.header("Finanzas")
 
 tab1,tab2 = st.tabs(["Ingresos","Gastos"])
 
