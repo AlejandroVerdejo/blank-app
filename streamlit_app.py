@@ -16,7 +16,7 @@ def tostada():
 st.markdown("# Main pages")
 # st.sidebar.markdown("# Main page")
 
-st.Page(title="Main page")
+# st.Page(title="Main page")
 
 st.title("New app")
 
