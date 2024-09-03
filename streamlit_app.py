@@ -23,6 +23,25 @@ data = [
     }    
 ]
 
+finances = {
+    "2020":{
+        "in":100,
+        "out":20
+    },
+    "2021":{
+        "in":115,
+        "out":70
+    },
+    "2022":{
+        "in":170,
+        "out":22
+    },
+    "2023":{
+        "in":40,
+        "out":10
+    }           
+}
+
 # df = pd.DataFrame({
 #     "first column":[1,2,3,4],
 #     "second column":[10,20,30,40]
@@ -32,7 +51,9 @@ df = pd.DataFrame(data)
 df
 
 chart_data = pd.DataFrame(
-     np.random.randn(20, 3),
-     columns=['a', 'b', 'c'])
+    finances
+    #  np.random.randn(20, 3),
+    #  columns=['a', 'b', 'c']
+    )
 
 st.line_chart(chart_data)
