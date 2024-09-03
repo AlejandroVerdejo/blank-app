@@ -14,12 +14,14 @@ data = [
     {
         "name":"p1",
         "units":20,
-        "price":7
+        "price":7,
+        "restock":10
     },
     {
         "name":"p2",
         "units":33,
-        "price":13
+        "price":13,
+        "restock":15
     }    
 ]
 
