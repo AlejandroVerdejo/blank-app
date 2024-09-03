@@ -64,7 +64,9 @@ col2.button("Back",use_container_width=True)
 # })
 data_frame = pd.DataFrame(data)
 
-st.dataframe(data_frame,hide_index=True, use_container_width=True)
+st.dataframe(data_frame,hide_index=True, use_container_width=True,column_config={
+    "units":"Unidades"
+})
 
 # st.bar_chart(data=data_frame,x="name",x_label="Stock",y="units",y_label="Items", horizontal=True)
 
