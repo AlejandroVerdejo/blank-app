@@ -10,7 +10,7 @@ def vote():
     if st.button("Submit"):
         st.rerun()
 
-st.markdown("# Main page")
+st.markdown("# Main pages")
 # st.sidebar.markdown("# Main page")
 
 st.title("New app")
