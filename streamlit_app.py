@@ -2,6 +2,13 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 
+@st.dialog("Cast your vote")
+def vote():
+    st.write(f"Why isyour favorite?")
+    reason = st.text_input("Because...")
+    if st.button("Submit"):
+        st.rerun()
+
 st.markdown("# Main page")
 # st.sidebar.markdown("# Main page")
 
@@ -36,6 +43,8 @@ finances = {
         "2023":8
     }          
 }
+
+click = st.button("Click",on_click=vote)
 
 # data_frame = pd.DataFrame({
 #     "first column":[1,2,3,4],
