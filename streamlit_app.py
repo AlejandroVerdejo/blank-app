@@ -57,7 +57,7 @@ finances = {
 col1,col2 = st.columns(2)
 
 col1.button("Click",on_click=vote,use_container_width=True)
-col2.button("Back",on_click=tostada,use_container_width=True)
+col2.button("Tostada",on_click=tostada,use_container_width=True)
 
 # click = st.button("Click",on_click=vote)
 
