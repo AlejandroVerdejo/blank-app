@@ -94,6 +94,9 @@ st.altair_chart(
 
 tab1,tab2 = st.tabs(["Ingresos","Gastos"])
 
+tab1.bar_chart(finances["in"])
+tab2.bar_chart(finances["out"])
+
 chart_data = pd.DataFrame(
     finances
     #  np.random.randn(20, 3),
