@@ -66,7 +66,7 @@ data_frame = pd.DataFrame(data)
 
 st.dataframe(data_frame,hide_index=True, use_container_width=True,column_config={
     "name":"Nombre",
-    "units":"Unidades"
+    "units":"Unidades",
     "price":"Precio",
     "restock":"Restock"
 })
