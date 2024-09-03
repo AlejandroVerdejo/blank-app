@@ -95,10 +95,14 @@ st.altair_chart(
     +alt.Chart(data_frame).mark_point(shape="diamond",filled=True,size=50,color="red",opacity=1).encode(x="restock",y="name"),use_container_width=True
     )
 
+st.subheader("Finanzas")
+
 tab1,tab2 = st.tabs(["Ingresos","Gastos"])
 
 tab1.bar_chart(finances["in"])
 tab2.bar_chart(finances["out"])
+
+st.subheader("Balance")
 
 chart_data = pd.DataFrame(
     finances
