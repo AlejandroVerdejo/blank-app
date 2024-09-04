@@ -15,6 +15,8 @@ def vote():
 def tostada():
     st.toast("Tostada")
 
+faker = Faker()
+
 st.title("New app.")
 # st.set_page_config(page_title="Main")
 # st.sidebar.title("Main page")
@@ -25,38 +27,46 @@ st.title("New app.")
 # st.Page(title="Main page")
 
 data = [
-    {
-        "name":"p1",
-        "units":random.randrange(1,200),
-        "price":random.randrange(1,50),
-        "restock":random.randrange(1,100)
-    },
-    {
-        "name":"p2",
-        "units":random.randrange(1,200),
-        "price":random.randrange(1,50),
-        "restock":random.randrange(1,100)
-    },
-    {
-        "name":"p3",
-        "units":random.randrange(1,200),
-        "price":random.randrange(1,50),
-        "restock":random.randrange(1,100)
-    }    
+    # {
+    #     "name":"p1",
+    #     "units":random.randrange(1,200),
+    #     "price":random.randrange(1,50),
+    #     "restock":random.randrange(1,100)
+    # },
+    # {
+    #     "name":"p2",
+    #     "units":random.randrange(1,200),
+    #     "price":random.randrange(1,50),
+    #     "restock":random.randrange(1,100)
+    # },
+    # {
+    #     "name":"p3",
+    #     "units":random.randrange(1,200),
+    #     "price":random.randrange(1,50),
+    #     "restock":random.randrange(1,100)
+    # }    
 ]
+
+for i in range(1,15):
+    data.append({
+        "name":faker.name(),
+        "units":random.randrange(1,200),
+        "price":random.randrange(1,50),
+        "restock":random.randrange(1,100)        
+    })
 
 finances = {
     "in":{
-        "2020":random.randrange(1,2000),
-        "2021":random.randrange(1,2000),
-        "2022":random.randrange(1,2000),
-        "2023":random.randrange(1,2000)
+        "2020":random.randrange(500,2000),
+        "2021":random.randrange(500,2000),
+        "2022":random.randrange(500,2000),
+        "2023":random.randrange(500,2000)
     },
     "out":{
-        "2020":random.randrange(1,2000),
-        "2021":random.randrange(1,2000),
-        "2022":random.randrange(1,2000),
-        "2023":random.randrange(1,2000)
+        "2020":random.randrange(500,2000),
+        "2021":random.randrange(500,2000),
+        "2022":random.randrange(500,2000),
+        "2023":random.randrange(500,2000)
     }          
 }
 
