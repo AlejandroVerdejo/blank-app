@@ -434,7 +434,7 @@ finances_chart_data = pd.DataFrame(
     )
 
 # Da nombre a las columnas(lineas)
-finances_chart_data.columns = ["Ingresos","Gastos"]
+finances_chart_data.columns = ["1-Ingresos","2-Gastos"]
 
 # Cambia el color de cada linea
 st.line_chart(finances_chart_data,color=["#de2f2f","#2fde5d"])
