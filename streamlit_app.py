@@ -95,7 +95,7 @@ if count > 0:
         # st.warning(f"Hay {count} elemento por debajo del numero de restock")
         # with st.expander(st.warning(f"Hay {count} elemento por debajo del numero de restock")):
         with st.expander("Hay x elemento por debajo del numero de restock"):
-            pass
+            st.write("x")
             # for i in data:
                 # if i["restock"] > i["units"]:
                     # st.warning(i["name"])
