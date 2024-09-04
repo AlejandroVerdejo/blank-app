@@ -152,7 +152,7 @@ for data in st.session_state["data"]:
 
 # Create a pie chart
 fig, ax = plt.subplots()
-ax.pie(sales.values(), labels=sales.keys(), autopct='%1.1f%%')
+ax.pie(sales.values(), labels=sales.keys(), autopct='%1.1f%%',colors=['red', 'green', 'blue', 'cyan'], shadow=True)
 
 # Display the chart
 st.pyplot(fig)
