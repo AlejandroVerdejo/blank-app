@@ -394,7 +394,7 @@ inventory_tab_2.altair_chart(
 
 plost.pie_chart(
     data=inventory_data_frame,
-    theta=st.session_state["show_sales"]
+    theta='l_sales'
 )
 
 st.header("Finanzas")
