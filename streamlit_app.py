@@ -337,7 +337,8 @@ st.data_editor(inventory_data_frame,hide_index=True, use_container_width=True,co
     ),
     "category":st.column_config.SelectboxColumn(
         "Categoria",
-        options=categories
+        options=categories,
+        required=True
     )
 })
 
