@@ -416,12 +416,7 @@ datatest = [
     },
 ]
 
-plost.pie_chart(
-    data=datatest,
-    theta="quantity",
-    color="color",
-
-)
+plost.pie_chart(datatest,"quantity")
 
 # plost.pie_chart(
 #     data=inventory_data_frame,
