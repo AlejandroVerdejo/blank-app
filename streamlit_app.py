@@ -395,7 +395,7 @@ else:
 
 # Mostrara las ventas de los productos, mostrando las totales o las del ultimo mes segun la variable de sesion #* Con grafico de quesitos
 fig = go.Figure(data=[go.Pie(labels=inventory_data_frame["name"], values=inventory_data_frame[st.session_state["show_sales"]])])
-fig.update_layout(width=1600)
+fig.update_layout(width=1800)
 inventory_tab_2.plotly_chart(fig)
 
 datatest = [
