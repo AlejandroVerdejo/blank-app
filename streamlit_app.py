@@ -394,7 +394,7 @@ inventory_tab_2.altair_chart(
 
 import plotly.graph_objects as go
 
-fig = go.Figure(data=[go.Pie(labels=inventory_data_frame.index, values=inventory_data_frame['your_column_name'])])
+fig = go.Figure(data=[go.Pie(labels=inventory_data_frame.index, values=inventory_data_frame['l_sales'])])
 st.plotly_chart(fig)
 
 plost.pie_chart(
