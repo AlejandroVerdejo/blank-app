@@ -93,8 +93,14 @@ for i in data:
 if count > 0:
     if count == 1:
         st.warning(f"Hay {count} elemento por debajo del numero de restock")
+        with st.expander(st.warning(f"Hay {count} elemento por debajo del numero de restock")):
+            for i in data:
+                if i["restock"] > i["units"]:
+                    st.warning(f"{i["name"]}")
     else:
-        st.warning(f"Hay {count} elementos por debajo del numero de restock")
+        # st.warning(f"Hay {count} elementos por debajo del numero de restock")
+        with st.expander(f"Hay {count} elementos por debajo del numero de restock"):
+            pass
 
 st.altair_chart(
     # alt.Chart(data_frame).mark_bar(orient="horizontal").encode(x="units",y="name")
