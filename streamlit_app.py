@@ -392,6 +392,11 @@ inventory_tab_2.altair_chart(
     alt.Chart(inventory_data_frame).mark_bar(orient="horizontal",color="#3b57e3").encode(alt.X(st.session_state["show_sales"],title=""),alt.Y("name",title="")),use_container_width=True
 )
 
+plost.pie_chart(
+    data=inventory_data_frame,
+    theta=st.session_state["show_sales"]
+)
+
 st.header("Finanzas")
 
 # finances_show_mode = st.radio(label="",options=["Anuales","Mensuales"],horizontal=True)
