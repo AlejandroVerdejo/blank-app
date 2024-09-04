@@ -131,7 +131,7 @@ chart_data.columns = ["Ingresos","Gastos"]
 st.line_chart(chart_data)
 
 # Assuming df is your DataFrame and "x" and "y" are column names
-fig = px.line(chart_data, finances)
+fig = px.line(chart_data, x="x",y="y")
 
 fig.update_layout(
     xaxis=dict(
