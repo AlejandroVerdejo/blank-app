@@ -118,10 +118,10 @@ st.altair_chart(
 
 st.header("Finanzas")
 
-tab1,tab2 = st.tabs(["Ingresos","Gastos"])
+finances_tab_1,finances_tab_2 = st.tabs(["Ingresos","Gastos"])
 
-tab1.bar_chart(finances["in"],color="#2fde5d")
-tab2.bar_chart(finances["out"],color="#de2f2f")
+finances_tab_1.bar_chart(finances["in"],color="#2fde5d")
+finances_tab_2.bar_chart(finances["out"],color="#de2f2f")
 
 st.subheader("Balance")
 
