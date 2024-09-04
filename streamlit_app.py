@@ -18,7 +18,7 @@ def tostada():
 
 faker = Faker()
 
-pg = st.navigation([st.Page("streamlit_app.py")],position="sidebar")
+# pg = st.navigation([st.Page("streamlit_app.py")],position="sidebar")
 # pg.run()
 
 st.title("New app.")
