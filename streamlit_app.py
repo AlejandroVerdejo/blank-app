@@ -311,8 +311,6 @@ st.dataframe(inventory_data_frame,hide_index=True, use_container_width=True,colu
     "t_sales":"Ventas totales"
 })
 
-# st.table(data_frame)
-
 # st.bar_chart(data=data_frame,x="name",x_label="Stock",y="units",y_label="Items", horizontal=True)
 
 # Crea dos tabs para Existencias y Ventas
