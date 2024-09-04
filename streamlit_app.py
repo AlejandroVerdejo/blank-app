@@ -416,9 +416,7 @@ datatest = [
     },
 ]
 
-datatest = [15,167,1,16,14]
-
-plost.pie_chart(datatest)
+plost.pie_chart(datatest,"quantity")
 
 # plost.pie_chart(
 #     data=inventory_data_frame,
