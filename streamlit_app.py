@@ -364,6 +364,14 @@ else:
 if st.session_state["finances_mode"] == "monthly":
     select = st.selectbox(label="",options=[2018,2019,2020,2021,2022,2023,2024])
 
+# finances_data = {
+#     "in":{},
+#     "out":{}
+# }
+
+# for data in st.session_state["finances"]["in"]:
+#     finances_data["in"]
+
 
 
 finances_tab_1,finances_tab_2 = st.tabs(["Ingresos","Gastos"])
