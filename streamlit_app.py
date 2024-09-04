@@ -388,9 +388,9 @@ else:
     st.session_state["show_sales"] = "t_sales"
 
 # Mostrara las ventas de los productos, mostrando las totales o las del ultimo mes segun la variable de sesion
-inventory_tab_2.altair_chart(
-    alt.Chart(inventory_data_frame).mark_bar(orient="horizontal",color="#3b57e3").encode(alt.X(st.session_state["show_sales"],title=""),alt.Y("name",title="")),use_container_width=True
-)
+# inventory_tab_2.altair_chart(
+#     alt.Chart(inventory_data_frame).mark_bar(orient="horizontal",color="#3b57e3").encode(alt.X(st.session_state["show_sales"],title=""),alt.Y("name",title="")),use_container_width=True
+# )
 
 import plotly.graph_objects as go
 
