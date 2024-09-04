@@ -282,9 +282,6 @@ if "show_sales" not in st.session_state:
 # if "finances_mode" not in st.session_state:
     # st.session_state["finances_mode"] = "yearly"
 
-if "finances_year" not in st.session_state:
-    st.session_state["finances_year"] = "2023"
-
 # Crea un contenedor divido en dos columnas
 col1,col2 = st.columns(2)
 
@@ -442,7 +439,6 @@ finances_chart_data.columns = ["1-Ingresos","2-Gastos"]
 st.line_chart(finances_chart_data,color=["#2fde5d","#de2f2f"])
 
 finances_yearly_tab, finances_monthly_tab = st.tabs(["Anual","Mensual"])
-selected_year = st.session_state["finances_year"]
 
 if "prueba" not in st.session_state:
     st.session_state["prueba"] = {
@@ -581,12 +577,6 @@ dtf_yearly_data = pd.DataFrame(
 
 dtf_yearly_data.columns = ["1-Ingresos","2-Gastos"]
 
-with finances_monthly_tab:
-    year_radio = st.radio(label="",options=YEARS,horizontal=True,index=YEARS.index(st.session_state["finances_year"]))
-
-st.session_state["finances_year"] = year_radio
-
-# finances_monthly_tab.line_chart(dtf_monthly_data,x_label=st.session_state["finances_year"],color=["#2fde5d","#de2f2f"])
 finances_yearly_tab.line_chart(dtf_yearly_data,color=["#2fde5d","#de2f2f"])
 with finances_monthly_tab:
     tabs = st.tabs(st.session_state["prueba"]["in"].keys())
