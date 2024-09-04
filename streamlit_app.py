@@ -142,8 +142,9 @@ inventory_tab_2.altair_chart(
 )
 
 sales = []
-for data in inventory_data_frame:
-    sales.append(data["l_sales"])
+for i in range(1,20):
+    # sales.append(data["l_sales"])
+    sales.append(random.randrange(100,1000))
 
 priority_plot = (
     alt.Chart(sales)
