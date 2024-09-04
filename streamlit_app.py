@@ -38,16 +38,16 @@ for i in range(1,15):
 
 finances = {
     "in":{
-        "2020":random.randrange(500,2000),
-        "2021":random.randrange(500,2000),
-        "2022":random.randrange(500,2000),
-        "2023":random.randrange(500,2000)
+        "2020":random.randrange(1000,2500),
+        "2021":random.randrange(1000,2500),
+        "2022":random.randrange(1000,2500),
+        "2023":random.randrange(1000,2500)
     },
     "out":{
-        "2020":random.randrange(500,2000),
-        "2021":random.randrange(500,2000),
-        "2022":random.randrange(500,2000),
-        "2023":random.randrange(500,2000)
+        "2020":random.randrange(1000,2500),
+        "2021":random.randrange(1000,2500),
+        "2022":random.randrange(1000,2500),
+        "2023":random.randrange(1000,2500)
     }          
 }
 
