@@ -507,7 +507,7 @@ if "prueba" not in st.session_state:
 montly_data = pd.DataFrame(
     # st.session_state[]    
 )
-selected_year = 2021
+selected_year = "2021"
 selected_year_data = {
     "in":st.session_state["prueba"]["in"][selected_year].values(),
     "out":st.session_state["prueba"]["out"][selected_year].values()
