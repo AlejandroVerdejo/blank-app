@@ -398,6 +398,11 @@ fig = go.Figure(data=[go.Pie(labels=inventory_data_frame["name"], values=invento
 # fig.update_layout(width=700, height=500)
 inventory_tab_2.plotly_chart(fig)
 
+plost.pie_chart(
+    data=inventory_data_frame["name"],
+    theta=st.session_state["show_sales"]
+)
+
 # plost.pie_chart(
 #     data=inventory_data_frame,
 #     theta=st.session_state["show_sales"]
