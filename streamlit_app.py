@@ -439,6 +439,8 @@ finances_chart_data.columns = ["1-Ingresos","2-Gastos"]
 # Cambia el color de cada linea
 st.line_chart(finances_chart_data,color=["#2fde5d","#de2f2f"])
 
+finances_yearly_tab, finances_monthly_tab = st.tabs("Anual","Mensual")
+
 if "prueba" not in st.session_state:
     st.session_state["prueba"] = {
         "in":{
@@ -587,6 +589,6 @@ dtf_yearly_data = pd.DataFrame(
 
 dtf_yearly_data.columns = ["1-Ingresos","2-Gastos"]
 
-st.line_chart(dtf_monthly_data,x_label=selected_year,color=["#2fde5d","#de2f2f"])
-st.line_chart(dtf_yearly_data,color=["#2fde5d","#de2f2f"])
+finances_monthly_tab.line_chart(dtf_monthly_data,x_label=selected_year,color=["#2fde5d","#de2f2f"])
+finances_yearly_tab.line_chart(dtf_yearly_data,color=["#2fde5d","#de2f2f"])
 
