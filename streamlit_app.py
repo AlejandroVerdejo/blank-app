@@ -602,6 +602,6 @@ match year_radio:
         st.session_state["finances_year"] = "2020"
     case "2023":
         st.session_state["finances_year"] = "2020"
-finances_monthly_tab.line_chart(dtf_monthly_data,x_label=selected_year,color=["#2fde5d","#de2f2f"])
+finances_monthly_tab.line_chart(dtf_monthly_data,x_label=st.session_state["finances_year"],color=["#2fde5d","#de2f2f"])
 finances_yearly_tab.line_chart(dtf_yearly_data,color=["#2fde5d","#de2f2f"])
 
