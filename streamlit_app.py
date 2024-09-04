@@ -26,40 +26,41 @@ st.title("New app.")
 
 # st.Page(title="Main page")
 
-data = []
+if "data" not in st.session_state:
+    st.session_state["data"] = []
+    for i in range(1,15):
+        last_month_sales = random.randrange(1,100)
+        st.session_state["data"].append({
+            "name":faker.name(),
+            "units":random.randrange(1,200),
+            "price":random.randrange(1,50),
+            "restock":random.randrange(1,100),
+            "l_sales":last_month_sales,
+            "t_sales":random.randrange(last_month_sales,500)
+            # "sales":random.randrange(1,100)
+        })
 
-for i in range(1,15):
-    last_month_sales = random.randrange(1,100)
-    data.append({
-        "name":faker.name(),
-        "units":random.randrange(1,200),
-        "price":random.randrange(1,50),
-        "restock":random.randrange(1,100),
-        "l_sales":last_month_sales,
-        "t_sales":random.randrange(last_month_sales,500)
-        # "sales":random.randrange(1,100)
-    })
-
-finances = {
-    "in":{
-        "2018":random.randrange(90000,250000),
-        "2019":random.randrange(90000,250000),
-        "2020":random.randrange(90000,250000),
-        "2021":random.randrange(90000,250000),
-        "2022":random.randrange(90000,250000),
-        "2023":random.randrange(90000,250000),
-        "2024":random.randrange(90000,250000),
-    },
-    "out":{
-        "2018":random.randrange(90000,250000),
-        "2019":random.randrange(90000,250000),
-        "2020":random.randrange(90000,250000),
-        "2021":random.randrange(90000,250000),
-        "2022":random.randrange(90000,250000),
-        "2023":random.randrange(90000,250000),
-        "2024":random.randrange(90000,250000),
-    }          
-}
+if "finances" not in st.session_state:
+    st.session_state["finances"] = {
+        "in":{
+            "2018":random.randrange(90000,250000),
+            "2019":random.randrange(90000,250000),
+            "2020":random.randrange(90000,250000),
+            "2021":random.randrange(90000,250000),
+            "2022":random.randrange(90000,250000),
+            "2023":random.randrange(90000,250000),
+            "2024":random.randrange(90000,250000),
+        },
+        "out":{
+            "2018":random.randrange(90000,250000),
+            "2019":random.randrange(90000,250000),
+            "2020":random.randrange(90000,250000),
+            "2021":random.randrange(90000,250000),
+            "2022":random.randrange(90000,250000),
+            "2023":random.randrange(90000,250000),
+            "2024":random.randrange(90000,250000),
+        }          
+    }
 
 col1,col2 = st.columns(2)
 
@@ -76,7 +77,7 @@ col2.button("Tostada",on_click=tostada,use_container_width=True)
 st.header("Inventario")
 
 
-inventory_data_frame = pd.DataFrame(data)
+inventory_data_frame = pd.DataFrame(st.session_state["data"])
 
 st.dataframe(inventory_data_frame,hide_index=True, use_container_width=True,column_config={
     "name":"Nombre",
@@ -94,7 +95,7 @@ st.dataframe(inventory_data_frame,hide_index=True, use_container_width=True,colu
 inventory_tab_1,inventory_tab_2 = st.tabs(["Existencias","Ventas"])
 
 count = 0
-for i in data:
+for i in st.session_state["data"]:
     if i["restock"] > i["units"]:
         count += 1
 
@@ -105,7 +106,7 @@ if count > 0:
         restock_warning = f"Hay {count} elemento por debajo del numero de restock"
         with inventory_tab_1.expander(restock_warning):
             # st.write("x")
-            for i in data:
+            for i in st.session_state["data"]:
                 if i["restock"] > i["units"]:
                     item_restock_warning = " ·~ " + i["name"] + " - " + str(i["units"]) + " unidades (" + str(i["restock"]) + ")."
                     st.write(item_restock_warning)
@@ -114,7 +115,7 @@ if count > 0:
         restock_warning = f"Hay {count} elementos por debajo del numero de restock"
         with inventory_tab_1.expander(restock_warning):
             # st.write("x")
-            for i in data:
+            for i in st.session_state["data"]:
                 if i["restock"] > i["units"]:
                     item_restock_warning = " ·~ " + i["name"] + " - " + str(i["units"]) + " unidades (" + str(i["restock"]) + ")."
                     st.write(item_restock_warning)
@@ -135,13 +136,13 @@ st.header("Finanzas")
 
 finances_tab_1,finances_tab_2 = st.tabs(["Ingresos","Gastos"])
 
-finances_tab_1.bar_chart(finances["in"],color="#2fde5d")
-finances_tab_2.bar_chart(finances["out"],color="#de2f2f")
+finances_tab_1.bar_chart(st.session_state["finances"]["in"],color="#2fde5d")
+finances_tab_2.bar_chart(st.session_state["finances"]["out"],color="#de2f2f")
 
 st.subheader("Balance")
 
 finances_chart_data = pd.DataFrame(
-    finances,columns=["in","out"]
+    st.session_state["finances"],columns=["in","out"]
     #  np.random.randn(20, 3),
     #  columns=['a', 'b', 'c']
     )
