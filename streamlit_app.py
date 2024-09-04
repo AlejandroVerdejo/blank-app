@@ -18,6 +18,8 @@ def tostada():
 
 faker = Faker()
 
+st.navigation()
+
 st.title("New app.")
 # st.set_page_config(page_title="Main")
 # st.sidebar.title("Main page")
