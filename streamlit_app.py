@@ -142,17 +142,17 @@ inventory_tab_2.altair_chart(
     alt.Chart(inventory_data_frame).mark_bar(orient="horizontal",color="#3b57e3").encode(alt.X(st.session_state["show_sales"],title=""),alt.Y("name",title="")),use_container_width=True
 )
 
-sales = []
-for i in range(1,20):
-    # sales.append(data["l_sales"])
+sales = {}
+for data in inventory_data_frame:
+    sales[data["name"]] = data[st.session_state["show_sales"]]
     sales.append(random.randrange(100,1000))
 
 # Create some sample data
-data = {'a': 10, 'b': 15, 'c': 7, 'd': 18}
+# data = {'a': 10, 'b': 15, 'c': 7, 'd': 18}
 
 # Create a pie chart
 fig, ax = plt.subplots()
-ax.pie(data.values(), labels=data.keys(), autopct='%1.1f%%')
+ax.pie(sales.values(), labels=sales.keys(), autopct='%1.1f%%')
 
 # Display the chart
 st.pyplot(fig)
