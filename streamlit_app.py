@@ -306,18 +306,39 @@ inventory_data_frame = pd.DataFrame(st.session_state["data"])
 
 # Crea un dataFrame con los datos del inventario, ocultando el campo de index y dandole nombre a las columnas
 st.data_editor(inventory_data_frame,hide_index=True, use_container_width=True,column_config={
-    "name":"Nombre",
-    "units":"Unidades",
+    "name":st.column_config.TextColumn(
+        "Nombre"
+    ),
+    "units":st.column_config.NumberColumn(
+        "Unidades",
+        min_value=0,
+        step=1,
+    ),
     "price":st.column_config.NumberColumn(
         "Precio",
         min_value=0,
         step=1,
         format="%d€"
     ),
-    "restock":"Restock",
-    "l_sales":"V. Ultimo mes",
-    "t_sales":"V. Totales",
-    "category":"Categoria"
+    "restock":st.column_config.NumberColumn(
+        "Restock",
+        min_value=0,
+        step=1,
+    ),
+    "l_sales":st.column_config.NumberColumn(
+        "V. Ultimo mes",
+        min_value=0,
+        step=1,
+    ),
+    "t_sales":st.column_config.NumberColumn(
+        "V. Totales",
+        min_value=0,
+        step=1,
+    ),
+    "category":st.column_config.SelectboxColumn(
+        "Categoria",
+        options=categories
+    )
 })
 
 # st.bar_chart(data=data_frame,x="name",x_label="Stock",y="units",y_label="Items", horizontal=True)
