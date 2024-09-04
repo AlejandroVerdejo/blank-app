@@ -2,6 +2,8 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import altair as alt
+from faker import Faker
+import random
 
 @st.dialog("Cast your vote")
 def vote():
@@ -25,36 +27,36 @@ st.title("New app.")
 data = [
     {
         "name":"p1",
-        "units":20,
-        "price":7,
-        "restock":10
+        "units":random.randrange(1,200),
+        "price":random.randrange(1,50),
+        "restock":random.randrange(1,100)
     },
     {
         "name":"p2",
-        "units":33,
-        "price":13,
-        "restock":15
+        "units":random.randrange(1,200),
+        "price":random.randrange(1,50),
+        "restock":random.randrange(1,100)
     },
     {
         "name":"p3",
-        "units":3,
-        "price":80,
-        "restock":5
+        "units":random.randrange(1,200),
+        "price":random.randrange(1,50),
+        "restock":random.randrange(1,100)
     }    
 ]
 
 finances = {
     "in":{
-        "2020":100,
-        "2021":182,
-        "2022":98,
-        "2023":80
+        "2020":random.randrange(1,2000),
+        "2021":random.randrange(1,2000),
+        "2022":random.randrange(1,2000),
+        "2023":random.randrange(1,2000)
     },
     "out":{
-        "2020":120,
-        "2021":18,
-        "2022":50,
-        "2023":8
+        "2020":random.randrange(1,2000),
+        "2021":random.randrange(1,2000),
+        "2022":random.randrange(1,2000),
+        "2023":random.randrange(1,2000)
     }          
 }
 
