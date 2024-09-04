@@ -145,7 +145,7 @@ inventory_tab_2.altair_chart(
 sales = {}
 for data in st.session_state["data"]:
     sales[data["name"]] = data[st.session_state["show_sales"]]
-    sales.append(random.randrange(100,1000))
+    # sales.append(random.randrange(100,1000))
 
 # Create some sample data
 # data = {'a': 10, 'b': 15, 'c': 7, 'd': 18}
