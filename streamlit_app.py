@@ -564,10 +564,10 @@ if "prueba" not in st.session_state:
     }
 # st.write(prueba["in"]["2021"].keys())
 # st.write(sum(prueba["in"]["2021"].values()))
-selected_year = "2021"
+# selected_year = "2021"
 selected_year_data = {
-    "in":st.session_state["prueba"]["in"][selected_year],
-    "out":st.session_state["prueba"]["out"][selected_year]
+    "in":st.session_state["prueba"]["in"][st.session_state["finances_year"]],
+    "out":st.session_state["prueba"]["out"][st.session_state["finances_year"]]
 }
 
 dtf_monthly_data = pd.DataFrame(
@@ -593,6 +593,15 @@ dtf_yearly_data.columns = ["1-Ingresos","2-Gastos"]
 
 with finances_monthly_tab:
     year_radio = st.radio(label="",options=YEARS,horizontal=True,index=YEARS.index(st.session_state["finances_year"]))
+match year_radio:
+    case "2020":
+        st.session_state["finances_year"] = "2020"
+    case "2021":
+        st.session_state["finances_year"] = "2020"
+    case "2022":
+        st.session_state["finances_year"] = "2020"
+    case "2023":
+        st.session_state["finances_year"] = "2020"
 finances_monthly_tab.line_chart(dtf_monthly_data,x_label=selected_year,color=["#2fde5d","#de2f2f"])
 finances_yearly_tab.line_chart(dtf_yearly_data,color=["#2fde5d","#de2f2f"])
 
