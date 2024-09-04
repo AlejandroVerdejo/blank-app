@@ -26,26 +26,7 @@ st.title("New app.")
 
 # st.Page(title="Main page")
 
-data = [
-    # {
-    #     "name":"p1",
-    #     "units":random.randrange(1,200),
-    #     "price":random.randrange(1,50),
-    #     "restock":random.randrange(1,100)
-    # },
-    # {
-    #     "name":"p2",
-    #     "units":random.randrange(1,200),
-    #     "price":random.randrange(1,50),
-    #     "restock":random.randrange(1,100)
-    # },
-    # {
-    #     "name":"p3",
-    #     "units":random.randrange(1,200),
-    #     "price":random.randrange(1,50),
-    #     "restock":random.randrange(1,100)
-    # }    
-]
+data = []
 
 for i in range(1,15):
     data.append({
