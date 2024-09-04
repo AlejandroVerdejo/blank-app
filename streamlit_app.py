@@ -133,5 +133,5 @@ chart_data = pd.DataFrame(
 
 chart_data.columns = ["Ingresos","Gastos"]
 
-st.line_chart(chart_data,color=["red","green"])
+st.line_chart(chart_data,color=["#de2f2f","#2fde5d"])
 
