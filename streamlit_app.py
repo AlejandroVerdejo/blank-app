@@ -283,7 +283,7 @@ if "show_sales" not in st.session_state:
     # st.session_state["finances_mode"] = "yearly"
 
 if "finances_year" not in st.session_state:
-    st.session_state["finances_year"] = 2023
+    st.session_state["finances_year"] = "2023"
 
 # Crea un contenedor divido en dos columnas
 col1,col2 = st.columns(2)
