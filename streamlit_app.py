@@ -270,8 +270,8 @@ if "y_finances" not in st.session_state:
 if "show_sales" not in st.session_state:
     st.session_state["show_sales"] = "l_sales"
 
-if "finances_year" not in st.session_state:
-    st.session_state["finances_year"] = "collapsed"
+if "finances_mode" not in st.session_state:
+    st.session_state["finances_mode"] = "yearly"
 
 if "finances_year" not in st.session_state:
     st.session_state["finances_year"] = 2023
@@ -357,11 +357,12 @@ st.header("Finanzas")
 finances_show_mode = st.radio(label="",options=["Anuales","Mensuales"],horizontal=True)
 
 if finances_show_mode == "Anuales":
-    st.session_state["finances_yearly"] = "collapsed"
+    st.session_state["finances_mode"] = "yearly"
 else:
-    st.session_state["finances_yearly"] = "visible"
+    st.session_state["finances_mode"] = "monthly"
 
-select = st.selectbox(label="",options=[2018,2019,2020,2021,2022,2023,2024])
+if st.session_state["finances_mode"] == "monthly":
+    select = st.selectbox(label="",options=[2018,2019,2020,2021,2022,2023,2024])
 
 
 
