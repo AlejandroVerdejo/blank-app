@@ -315,8 +315,8 @@ st.data_editor(inventory_data_frame,hide_index=True, use_container_width=True,co
         format="$&d"
     ),
     "restock":"Restock",
-    "l_sales":"V.Ultimo mes",
-    "t_sales":"V.Totales",
+    "l_sales":"V. Ultimo mes",
+    "t_sales":"V. Totales",
     "category":"Categoria"
 })
 
