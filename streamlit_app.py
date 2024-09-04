@@ -335,7 +335,7 @@ inventory_tab_1.altair_chart(
     )
 
 with inventory_tab_2:
-    sales_radio = st.radio(label="",options=["Ultimo mes","Totales"],horizontal=True,key="sales_radio")
+    sales_radio = st.radio(label="",options=["Ultimo mes","Totales"],horizontal=True)
 
 if sales_radio == "Ultimo mes":
     st.session_state["show_sales"] = "l_sales"
@@ -347,6 +347,8 @@ inventory_tab_2.altair_chart(
 )
 
 st.header("Finanzas")
+
+finances_show_mode = st.radio(label="",options=["Anuales","Mensuales"],horizontal=True)
 
 finances_tab_1,finances_tab_2 = st.tabs(["Ingresos","Gastos"])
 
