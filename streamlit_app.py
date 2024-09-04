@@ -439,15 +439,81 @@ finances_chart_data.columns = ["Ingresos","Gastos"]
 # Cambia el color de cada linea
 st.line_chart(finances_chart_data,color=["#de2f2f","#2fde5d"])
 
-prueba = {
-    "in":{
-        "2020":100,
-        "2021":{
-            "Enero":100,
-            "Febrero":50,
-            "Marzo":30
+if "prueba" not in st.session_state:
+    st.session_state["prueba"] = {
+        "in":{
+            "2020":{
+                "Enero":random.randrange(1,100),
+                "Febrero":random.randrange(1,100),
+                "Marzo":random.randrange(1,100),
+                "Abril":random.randrange(1,100),
+                "Mayo":random.randrange(1,100),
+                "Junio":random.randrange(1,100),
+                "Julio":random.randrange(1,100),
+                "Agosto":random.randrange(1,100),
+                "Septiembre":random.randrange(1,100),
+                "Octubre":random.randrange(1,100),
+                "Noviembre":random.randrange(1,100),
+                "Diciembre":random.randrange(1,100),            
+            },
+            "2021":{
+                "Enero":random.randrange(1,100),
+                "Febrero":random.randrange(1,100),
+                "Marzo":random.randrange(1,100),
+                "Abril":random.randrange(1,100),
+                "Mayo":random.randrange(1,100),
+                "Junio":random.randrange(1,100),
+                "Julio":random.randrange(1,100),
+                "Agosto":random.randrange(1,100),
+                "Septiembre":random.randrange(1,100),
+                "Octubre":random.randrange(1,100),
+                "Noviembre":random.randrange(1,100),
+                "Diciembre":random.randrange(1,100),
+            }    
+        },
+        "out":{
+            "2020":{
+                "Enero":random.randrange(1,100),
+                "Febrero":random.randrange(1,100),
+                "Marzo":random.randrange(1,100),
+                "Abril":random.randrange(1,100),
+                "Mayo":random.randrange(1,100),
+                "Junio":random.randrange(1,100),
+                "Julio":random.randrange(1,100),
+                "Agosto":random.randrange(1,100),
+                "Septiembre":random.randrange(1,100),
+                "Octubre":random.randrange(1,100),
+                "Noviembre":random.randrange(1,100),
+                "Diciembre":random.randrange(1,100),            
+            },
+            "2021":{
+                "Enero":random.randrange(1,100),
+                "Febrero":random.randrange(1,100),
+                "Marzo":random.randrange(1,100),
+                "Abril":random.randrange(1,100),
+                "Mayo":random.randrange(1,100),
+                "Junio":random.randrange(1,100),
+                "Julio":random.randrange(1,100),
+                "Agosto":random.randrange(1,100),
+                "Septiembre":random.randrange(1,100),
+                "Octubre":random.randrange(1,100),
+                "Noviembre":random.randrange(1,100),
+                "Diciembre":random.randrange(1,100),
+            } 
         }    
-    }    
+    }
+# st.write(prueba["in"]["2021"].keys())
+# st.write(sum(prueba["in"]["2021"].values()))
+montly_data = pd.DataFrame(
+    # st.session_state[]    
+)
+selected_year = 2021
+selected_year_data = {
+    "in":st.session_state["prueba"]["in"][selected_year].values(),
+    "out":st.session_state["prueba"]["out"][selected_year].values()
 }
-st.write(prueba["in"]["2021"].keys())
-st.write(sum(prueba["in"]["2021"].values()))
+yearly_data = pd.DataFrame(
+    selected_year_data,columns=["in","out"]
+)
+st.line_chart(yearly_data)
+
