@@ -302,7 +302,7 @@ st.header("Inventario")
 inventory_data_frame = pd.DataFrame(st.session_state["data"])
 
 # Crea un dataFrame con los datos del inventario, ocultando el campo de index y dandole nombre a las columnas
-st.dataframe(inventory_data_frame, use_container_width=True,column_config={
+st.dataframe(inventory_data_frame,hide_index=True, use_container_width=True,column_config={
     "name":"Nombre",
     "units":"Unidades",
     "price":"Precio",
