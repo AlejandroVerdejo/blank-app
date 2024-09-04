@@ -28,6 +28,8 @@ def tostada():
 
 faker = Faker()
 
+YEARS = ["2020","2021","2022","2023"]
+
 st.title("New app.")
 
 # Opciones para las categorias de los elementos
@@ -277,8 +279,8 @@ if "y_finances" not in st.session_state:
 if "show_sales" not in st.session_state:
     st.session_state["show_sales"] = "l_sales"
 
-if "finances_mode" not in st.session_state:
-    st.session_state["finances_mode"] = "yearly"
+# if "finances_mode" not in st.session_state:
+    # st.session_state["finances_mode"] = "yearly"
 
 if "finances_year" not in st.session_state:
     st.session_state["finances_year"] = 2023
@@ -590,7 +592,7 @@ dtf_yearly_data = pd.DataFrame(
 dtf_yearly_data.columns = ["1-Ingresos","2-Gastos"]
 
 with finances_monthly_tab:
-    year_radio = st.radio(label="",options=["2020","2021","2022","2023"],horizontal=True)
+    year_radio = st.radio(label="",options=YEARS,horizontal=True,index=YEARS.index(st.session_state["finances_year"]))
 finances_monthly_tab.line_chart(dtf_monthly_data,x_label=selected_year,color=["#2fde5d","#de2f2f"])
 finances_yearly_tab.line_chart(dtf_yearly_data,color=["#2fde5d","#de2f2f"])
 
