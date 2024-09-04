@@ -600,4 +600,5 @@ finances_monthly_tab.line_chart(dtf_monthly_data,x_label=st.session_state["finan
 finances_yearly_tab.line_chart(dtf_yearly_data,color=["#2fde5d","#de2f2f"])
 
 tabs = st.tabs(["uno","dos","tres"])
+tabs[0].write("a")
 
