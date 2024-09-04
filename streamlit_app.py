@@ -123,9 +123,11 @@ chart_data = pd.DataFrame(
     finances,columns=["in","out"]
     #  np.random.randn(20, 3),
     #  columns=['a', 'b', 'c']
-    ).columns = ["Ingresos","Gastos"]
+    )
 
-st.line_chart(chart_data)
+chart_data.columns = ["Ingresos","Gastos"]
+
+st.line_chart(chart_data,x_label=["Ingresos","Gastos"])
 
 # Create a DataFrame with 3 columns
 chart_data = pd.DataFrame(np.random.randn(20, 3), columns=["a", "b", "c"])
