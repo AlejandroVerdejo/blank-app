@@ -141,6 +141,17 @@ inventory_tab_2.altair_chart(
     alt.Chart(inventory_data_frame).mark_bar(orient="horizontal",color="#3b57e3").encode(alt.X(st.session_state["show_sales"],title=""),alt.Y("name",title="")),use_container_width=True
 )
 
+priority_plot = (
+    alt.Chart(inventory_data_frame)
+    .mark_arc()
+    .encode(theta="count():Q", color="Priority:N")
+    .properties(height=300)
+    .configure_legend(
+        orient="bottom", titleFontSize=14, labelFontSize=14, titlePadding=5
+    )
+)
+st.altair_chart(priority_plot, use_container_width=True, theme="streamlit")
+
 st.header("Finanzas")
 
 finances_tab_1,finances_tab_2 = st.tabs(["Ingresos","Gastos"])
