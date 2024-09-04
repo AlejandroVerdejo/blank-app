@@ -72,10 +72,218 @@ if "finances" not in st.session_state:
         }          
     }
 
+if "y_finances" not in st.session_state:
+    st.session_state["y_finances"] = {
+        "in":{
+            "2018":{
+                "Enero":random.randrange(90000,250000),
+                "Febrero":random.randrange(90000,250000),
+                "Marzo":random.randrange(90000,250000),
+                "Abril":random.randrange(90000,250000),
+                "Mayo":random.randrange(90000,250000),
+                "Junio":random.randrange(90000,250000),
+                "Julio":random.randrange(90000,250000),
+                "Agosto":random.randrange(90000,250000),
+                "Septiembre":random.randrange(90000,250000),
+                "Octubre":random.randrange(90000,250000),
+                "Noviembre":random.randrange(90000,250000),
+                "Diciembre":random.randrange(90000,250000),
+            },
+            "2019":{
+                "Enero":random.randrange(90000,250000),
+                "Febrero":random.randrange(90000,250000),
+                "Marzo":random.randrange(90000,250000),
+                "Abril":random.randrange(90000,250000),
+                "Mayo":random.randrange(90000,250000),
+                "Junio":random.randrange(90000,250000),
+                "Julio":random.randrange(90000,250000),
+                "Agosto":random.randrange(90000,250000),
+                "Septiembre":random.randrange(90000,250000),
+                "Octubre":random.randrange(90000,250000),
+                "Noviembre":random.randrange(90000,250000),
+                "Diciembre":random.randrange(90000,250000),
+            },
+            "2020":{
+                "Enero":random.randrange(90000,250000),
+                "Febrero":random.randrange(90000,250000),
+                "Marzo":random.randrange(90000,250000),
+                "Abril":random.randrange(90000,250000),
+                "Mayo":random.randrange(90000,250000),
+                "Junio":random.randrange(90000,250000),
+                "Julio":random.randrange(90000,250000),
+                "Agosto":random.randrange(90000,250000),
+                "Septiembre":random.randrange(90000,250000),
+                "Octubre":random.randrange(90000,250000),
+                "Noviembre":random.randrange(90000,250000),
+                "Diciembre":random.randrange(90000,250000),
+            },
+            "2021":{
+                "Enero":random.randrange(90000,250000),
+                "Febrero":random.randrange(90000,250000),
+                "Marzo":random.randrange(90000,250000),
+                "Abril":random.randrange(90000,250000),
+                "Mayo":random.randrange(90000,250000),
+                "Junio":random.randrange(90000,250000),
+                "Julio":random.randrange(90000,250000),
+                "Agosto":random.randrange(90000,250000),
+                "Septiembre":random.randrange(90000,250000),
+                "Octubre":random.randrange(90000,250000),
+                "Noviembre":random.randrange(90000,250000),
+                "Diciembre":random.randrange(90000,250000),
+            },
+            "2022":{
+                "Enero":random.randrange(90000,250000),
+                "Febrero":random.randrange(90000,250000),
+                "Marzo":random.randrange(90000,250000),
+                "Abril":random.randrange(90000,250000),
+                "Mayo":random.randrange(90000,250000),
+                "Junio":random.randrange(90000,250000),
+                "Julio":random.randrange(90000,250000),
+                "Agosto":random.randrange(90000,250000),
+                "Septiembre":random.randrange(90000,250000),
+                "Octubre":random.randrange(90000,250000),
+                "Noviembre":random.randrange(90000,250000),
+                "Diciembre":random.randrange(90000,250000),
+            },
+            "2023":{
+                "Enero":random.randrange(90000,250000),
+                "Febrero":random.randrange(90000,250000),
+                "Marzo":random.randrange(90000,250000),
+                "Abril":random.randrange(90000,250000),
+                "Mayo":random.randrange(90000,250000),
+                "Junio":random.randrange(90000,250000),
+                "Julio":random.randrange(90000,250000),
+                "Agosto":random.randrange(90000,250000),
+                "Septiembre":random.randrange(90000,250000),
+                "Octubre":random.randrange(90000,250000),
+                "Noviembre":random.randrange(90000,250000),
+                "Diciembre":random.randrange(90000,250000),
+            },
+            "2024":{
+                "Enero":random.randrange(90000,250000),
+                "Febrero":random.randrange(90000,250000),
+                "Marzo":random.randrange(90000,250000),
+                "Abril":random.randrange(90000,250000),
+                "Mayo":random.randrange(90000,250000),
+                "Junio":random.randrange(90000,250000),
+                "Julio":random.randrange(90000,250000),
+                "Agosto":random.randrange(90000,250000),
+                "Septiembre":random.randrange(90000,250000),
+                "Octubre":random.randrange(90000,250000),
+                "Noviembre":random.randrange(90000,250000),
+                "Diciembre":random.randrange(90000,250000),
+            },
+        },
+        "out":{
+            "2018":{
+                "Enero":random.randrange(90000,250000),
+                "Febrero":random.randrange(90000,250000),
+                "Marzo":random.randrange(90000,250000),
+                "Abril":random.randrange(90000,250000),
+                "Mayo":random.randrange(90000,250000),
+                "Junio":random.randrange(90000,250000),
+                "Julio":random.randrange(90000,250000),
+                "Agosto":random.randrange(90000,250000),
+                "Septiembre":random.randrange(90000,250000),
+                "Octubre":random.randrange(90000,250000),
+                "Noviembre":random.randrange(90000,250000),
+                "Diciembre":random.randrange(90000,250000),
+            },
+            "2019":{
+                "Enero":random.randrange(90000,250000),
+                "Febrero":random.randrange(90000,250000),
+                "Marzo":random.randrange(90000,250000),
+                "Abril":random.randrange(90000,250000),
+                "Mayo":random.randrange(90000,250000),
+                "Junio":random.randrange(90000,250000),
+                "Julio":random.randrange(90000,250000),
+                "Agosto":random.randrange(90000,250000),
+                "Septiembre":random.randrange(90000,250000),
+                "Octubre":random.randrange(90000,250000),
+                "Noviembre":random.randrange(90000,250000),
+                "Diciembre":random.randrange(90000,250000),
+            },
+            "2020":{
+                "Enero":random.randrange(90000,250000),
+                "Febrero":random.randrange(90000,250000),
+                "Marzo":random.randrange(90000,250000),
+                "Abril":random.randrange(90000,250000),
+                "Mayo":random.randrange(90000,250000),
+                "Junio":random.randrange(90000,250000),
+                "Julio":random.randrange(90000,250000),
+                "Agosto":random.randrange(90000,250000),
+                "Septiembre":random.randrange(90000,250000),
+                "Octubre":random.randrange(90000,250000),
+                "Noviembre":random.randrange(90000,250000),
+                "Diciembre":random.randrange(90000,250000),
+            },
+            "2021":{
+                "Enero":random.randrange(90000,250000),
+                "Febrero":random.randrange(90000,250000),
+                "Marzo":random.randrange(90000,250000),
+                "Abril":random.randrange(90000,250000),
+                "Mayo":random.randrange(90000,250000),
+                "Junio":random.randrange(90000,250000),
+                "Julio":random.randrange(90000,250000),
+                "Agosto":random.randrange(90000,250000),
+                "Septiembre":random.randrange(90000,250000),
+                "Octubre":random.randrange(90000,250000),
+                "Noviembre":random.randrange(90000,250000),
+                "Diciembre":random.randrange(90000,250000),
+            },
+            "2022":{
+                "Enero":random.randrange(90000,250000),
+                "Febrero":random.randrange(90000,250000),
+                "Marzo":random.randrange(90000,250000),
+                "Abril":random.randrange(90000,250000),
+                "Mayo":random.randrange(90000,250000),
+                "Junio":random.randrange(90000,250000),
+                "Julio":random.randrange(90000,250000),
+                "Agosto":random.randrange(90000,250000),
+                "Septiembre":random.randrange(90000,250000),
+                "Octubre":random.randrange(90000,250000),
+                "Noviembre":random.randrange(90000,250000),
+                "Diciembre":random.randrange(90000,250000),
+            },
+            "2023":{
+                "Enero":random.randrange(90000,250000),
+                "Febrero":random.randrange(90000,250000),
+                "Marzo":random.randrange(90000,250000),
+                "Abril":random.randrange(90000,250000),
+                "Mayo":random.randrange(90000,250000),
+                "Junio":random.randrange(90000,250000),
+                "Julio":random.randrange(90000,250000),
+                "Agosto":random.randrange(90000,250000),
+                "Septiembre":random.randrange(90000,250000),
+                "Octubre":random.randrange(90000,250000),
+                "Noviembre":random.randrange(90000,250000),
+                "Diciembre":random.randrange(90000,250000),
+            },
+            "2024":{
+                "Enero":random.randrange(90000,250000),
+                "Febrero":random.randrange(90000,250000),
+                "Marzo":random.randrange(90000,250000),
+                "Abril":random.randrange(90000,250000),
+                "Mayo":random.randrange(90000,250000),
+                "Junio":random.randrange(90000,250000),
+                "Julio":random.randrange(90000,250000),
+                "Agosto":random.randrange(90000,250000),
+                "Septiembre":random.randrange(90000,250000),
+                "Octubre":random.randrange(90000,250000),
+                "Noviembre":random.randrange(90000,250000),
+                "Diciembre":random.randrange(90000,250000),
+            },
+        }          
+    }
 
 if "show_sales" not in st.session_state:
     st.session_state["show_sales"] = "l_sales"
 
+# if "finances_mode" not in st.session_state:
+    # st.session_state["finances_mode"] = "yearly"
+
+if "finances_year" not in st.session_state:
+    st.session_state["finances_year"] = "2023"
 
 # Crea un contenedor divido en dos columnas
 col1,col2 = st.columns(2)
@@ -372,6 +580,11 @@ dtf_yearly_data = pd.DataFrame(
 )
 
 dtf_yearly_data.columns = ["1-Ingresos","2-Gastos"]
+
+with finances_monthly_tab:
+    year_radio = st.radio(label="",options=YEARS,horizontal=True,index=YEARS.index(st.session_state["finances_year"]))
+
+st.session_state["finances_year"] = year_radio
 
 # finances_monthly_tab.line_chart(dtf_monthly_data,x_label=st.session_state["finances_year"],color=["#2fde5d","#de2f2f"])
 finances_yearly_tab.line_chart(dtf_yearly_data,color=["#2fde5d","#de2f2f"])
