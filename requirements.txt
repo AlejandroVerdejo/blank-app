@@ -3,3 +3,4 @@ faker
 matplotlib
 streamlit-tags
 plost
+plotly
