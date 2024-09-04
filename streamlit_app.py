@@ -308,7 +308,12 @@ inventory_data_frame = pd.DataFrame(st.session_state["data"])
 st.dataframe(inventory_data_frame,hide_index=True, use_container_width=True,column_config={
     "name":"Nombre",
     "units":"Unidades",
-    "price":"Precio",
+    "price":st.column_config(
+        "Precio",
+        min_value=0,
+        step=1,
+        format="$&d"
+    ),
     "restock":"Restock",
     "l_sales":"Ventas ultimo mes",
     "t_sales":"Ventas totales",
