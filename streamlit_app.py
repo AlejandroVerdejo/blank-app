@@ -43,7 +43,6 @@ if "data" not in st.session_state:
             "restock":random.randrange(1,100),
             "l_sales":last_month_sales,
             "t_sales":random.randrange(last_month_sales,500)
-            # "sales":random.randrange(1,100)
         })
 
 if "finances" not in st.session_state:
