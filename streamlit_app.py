@@ -566,10 +566,12 @@ selected_year_data = {
     "out":st.session_state["prueba"]["out"][selected_year].values()
 }
 
-dtf_montly_data = pd.DataFrame(
+dtf_monthly_data = pd.DataFrame(
     selected_year_data,columns=["in","out"]
     # st.session_state[]    
 )
+dtf_monthly_data.columns = ["1-Ingresos","2-Gastos"]
+
 
 yearly_data = {
     "in":{},
@@ -584,6 +586,8 @@ dtf_yearly_data = pd.DataFrame(
     yearly_data,columns=["in","out"]
 )
 
-st.line_chart(dtf_montly_data)
+dtf_yearly_data.columns = ["1-Ingresos","2-Gastos"]
+
+st.line_chart(dtf_monthly_data)
 st.line_chart(dtf_yearly_data)
 
