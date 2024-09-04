@@ -443,6 +443,7 @@ finances_chart_data.columns = ["1-Ingresos","2-Gastos"]
 st.line_chart(finances_chart_data,color=["#2fde5d","#de2f2f"])
 
 finances_yearly_tab, finances_monthly_tab = st.tabs(["Anual","Mensual"])
+st.write(selected_year)
 
 if "prueba" not in st.session_state:
     st.session_state["prueba"] = {
