@@ -307,7 +307,8 @@ inventory_data_frame = pd.DataFrame(st.session_state["data"])
 # Crea un dataFrame con los datos del inventario, ocultando el campo de index y dandole nombre a las columnas
 st.data_editor(inventory_data_frame,hide_index=True, use_container_width=True,column_config={
     "name":st.column_config.TextColumn(
-        "Nombre"
+        "Nombre",
+        help="Nombre del producto"
     ),
     "units":st.column_config.NumberColumn(
         "Unidades",
