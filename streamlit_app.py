@@ -29,12 +29,18 @@ st.title("New app.")
 data = []
 
 for i in range(1,15):
+    units,price,restock,last_month_sales = random.randrange(1,100)
     data.append({
         "name":faker.name(),
-        "units":random.randrange(1,200),
-        "price":random.randrange(1,50),
-        "restock":random.randrange(1,100),
-        "sales":random.randrange(1,100)
+        "units":units,
+        "price":price,
+        "restock":restock,
+        "l_sales":last_month_sales,
+        "t_sales":random.randrange(last_month_sales,500)
+        # "units":random.randrange(1,200),
+        # "price":random.randrange(1,50),
+        # "restock":random.randrange(1,100),
+        # "sales":random.randrange(1,100)
     })
 
 finances = {
@@ -80,7 +86,8 @@ st.dataframe(inventory_data_frame,hide_index=True, use_container_width=True,colu
     "units":"Unidades",
     "price":"Precio",
     "restock":"Restock",
-    "sales":"Ventas"
+    "l_sales":"Ventas ultimo mes",
+    "t_sales":"Ventas totales"
 })
 
 # st.table(data_frame)
@@ -122,7 +129,7 @@ inventory_tab_1.altair_chart(
     )
 
 inventory_tab_2.altair_chart(
-    alt.Chart(inventory_data_frame).mark_bar(orient="horizontal",color="#3b57e3").encode(alt.X("sales",title=""),alt.Y("name",title="")),use_container_width=True
+    alt.Chart(inventory_data_frame).mark_bar(orient="horizontal",color="#3b57e3").encode(alt.X("l_sales",title=""),alt.Y("name",title="")),use_container_width=True
 )
 
 st.header("Finanzas")
