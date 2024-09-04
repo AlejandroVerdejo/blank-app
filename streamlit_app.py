@@ -398,12 +398,29 @@ fig = go.Figure(data=[go.Pie(labels=inventory_data_frame["name"], values=invento
 # fig.update_layout(width=700, height=500)
 inventory_tab_2.plotly_chart(fig)
 
+pie = [
+    {
+        "name":"a",
+        "quantity":random.randrange(1,100),
+        "color":"red"    
+    },
+    {
+        "name":"b",
+        "quantity":random.randrange(1,100),
+        "color":"blue"    
+    },
+    {
+        "name":"c",
+        "quantity":random.randrange(1,100),
+        "color":"green"    
+    },
+]
+
 plost.pie_chart(
-    data=inventory_data_frame["name"],
-    theta=st.session_state["show_sales"],
-    color=None,
-    title=None,
-    legend=None
+    data=pie,
+    theta="quantity",
+    color="color",
+
 )
 
 # plost.pie_chart(
