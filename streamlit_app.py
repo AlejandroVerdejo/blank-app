@@ -93,8 +93,8 @@ for i in data:
 if count > 0:
     if count == 1:
         # st.warning(f"Hay {count} elemento por debajo del numero de restock")
-        # with st.expander(st.warning(f"Hay {count} elemento por debajo del numero de restock")):
-        with st.expander("Hay x elemento por debajo del numero de restock"):
+        with st.expander(st.warning(f"Hay {count} elemento por debajo del numero de restock")):
+        # with st.expander("Hay x elemento por debajo del numero de restock"):
             # st.write("x")
             for i in data:
                 if i["restock"] > i["units"]:
