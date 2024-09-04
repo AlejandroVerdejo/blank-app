@@ -357,15 +357,15 @@ inventory_tab_2.altair_chart(
 
 st.header("Finanzas")
 
-finances_show_mode = st.radio(label="",options=["Anuales","Mensuales"],horizontal=True)
+# finances_show_mode = st.radio(label="",options=["Anuales","Mensuales"],horizontal=True)
 
-if finances_show_mode == "Anuales":
-    st.session_state["finances_mode"] = "yearly"
-else:
-    st.session_state["finances_mode"] = "monthly"
+# if finances_show_mode == "Anuales":
+#     st.session_state["finances_mode"] = "yearly"
+# else:
+#     st.session_state["finances_mode"] = "monthly"
 
-if st.session_state["finances_mode"] == "monthly":
-    select = st.selectbox(label="",options=[2018,2019,2020,2021,2022,2023,2024])
+# if st.session_state["finances_mode"] == "monthly":
+#     select = st.selectbox(label="",options=[2018,2019,2020,2021,2022,2023,2024])
 
 # finances_data = {
 #     "in":{},
