@@ -62,6 +62,9 @@ if "finances" not in st.session_state:
         }          
     }
 
+if "show_sales" not in st.session_state:
+    st.session_state["show_sales"] = "l_sales"
+
 col1,col2 = st.columns(2)
 
 col1.button("Click",on_click=vote,use_container_width=True)
@@ -129,7 +132,7 @@ inventory_tab_1.altair_chart(
 inventory_tab_2.radio(label="",options=["l_sales","t_sales"],horizontal=True,key="sales_radio")
 
 inventory_tab_2.altair_chart(
-    alt.Chart(inventory_data_frame).mark_bar(orient="horizontal",color="#3b57e3").encode(alt.X("l_sales",title=""),alt.Y("name",title="")),use_container_width=True
+    alt.Chart(inventory_data_frame).mark_bar(orient="horizontal",color="#3b57e3").encode(alt.X(st.session_state["show_sales"],title=""),alt.Y("name",title="")),use_container_width=True
 )
 
 st.header("Finanzas")
