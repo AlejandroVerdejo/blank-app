@@ -112,7 +112,7 @@ if count > 0:
 
 st.altair_chart(
     # alt.Chart(data_frame).mark_bar(orient="horizontal").encode(x="units",y="name")
-    alt.Chart(data_frame).mark_bar(orient="horizontal").encode(alt.X("units",title="Unidades"),alt.Y("name",title="Nombres"))
+    alt.Chart(data_frame).mark_bar(orient="horizontal",color="#3b57e3").encode(alt.X("units",title="Unidades"),alt.Y("name",title="Nombres"))
     +alt.Chart(data_frame).mark_point(shape="diamond",filled=True,size=50,color="red",opacity=1).encode(x="restock",y="name"),use_container_width=True
     )
 
@@ -120,8 +120,8 @@ st.header("Finanzas")
 
 tab1,tab2 = st.tabs(["Ingresos","Gastos"])
 
-tab1.bar_chart(finances["in"],color="#3b57e3")
-tab2.bar_chart(finances["out"],color="#3b57e3")
+tab1.bar_chart(finances["in"],color="#de2f2f")
+tab2.bar_chart(finances["out"],color="#2fde5d")
 
 st.subheader("Balance")
 
