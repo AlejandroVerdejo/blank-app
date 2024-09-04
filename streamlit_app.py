@@ -128,13 +128,13 @@ finances_tab_2.bar_chart(finances["out"],color="#de2f2f")
 
 st.subheader("Balance")
 
-chart_data = pd.DataFrame(
+finances_chart_data = pd.DataFrame(
     finances,columns=["in","out"]
     #  np.random.randn(20, 3),
     #  columns=['a', 'b', 'c']
     )
 
-chart_data.columns = ["Ingresos","Gastos"]
+finances_chart_data.columns = ["Ingresos","Gastos"]
 
-st.line_chart(chart_data,color=["#de2f2f","#2fde5d"])
+st.line_chart(finances_chart_data,color=["#de2f2f","#2fde5d"])
 
