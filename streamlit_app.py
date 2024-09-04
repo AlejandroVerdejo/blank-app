@@ -33,7 +33,8 @@ for i in range(1,15):
         "name":faker.name(),
         "units":random.randrange(1,200),
         "price":random.randrange(1,50),
-        "restock":random.randrange(1,100)        
+        "restock":random.randrange(1,100),
+        "sales":random.randrange(1,100)
     })
 
 finances = {
@@ -78,7 +79,8 @@ st.dataframe(inventory_data_frame,hide_index=True, use_container_width=True,colu
     "name":"Nombre",
     "units":"Unidades",
     "price":"Precio",
-    "restock":"Restock"
+    "restock":"Restock",
+    "sales":"Ventas"
 })
 
 # st.table(data_frame)
@@ -118,6 +120,10 @@ inventory_tab_1.altair_chart(
     alt.Chart(inventory_data_frame).mark_bar(orient="horizontal",color="#3b57e3").encode(alt.X("units",title=""),alt.Y("name",title=""))
     +alt.Chart(inventory_data_frame).mark_point(shape="diamond",filled=True,size=50,color="red",opacity=1).encode(x="restock",y="name"),use_container_width=True
     )
+
+inventory_tab_2.altair_chart(
+    alt.Chart(inventory_data_frame).mark_bar(orient="horizontal",color="#3b57e3").encode(alt.X("sales",title=""),alt.Y("name",title="")),use_container_width=True
+)
 
 st.header("Finanzas")
 
