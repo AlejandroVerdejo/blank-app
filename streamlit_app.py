@@ -120,8 +120,8 @@ st.header("Finanzas")
 
 tab1,tab2 = st.tabs(["Ingresos","Gastos"])
 
-tab1.bar_chart(finances["in"])
-tab2.bar_chart(finances["out"])
+tab1.bar_chart(finances["in"],color="#3b57e3")
+tab2.bar_chart(finances["out"],color="#3b57e3")
 
 st.subheader("Balance")
 
