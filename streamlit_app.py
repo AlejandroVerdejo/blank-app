@@ -141,8 +141,12 @@ inventory_tab_2.altair_chart(
     alt.Chart(inventory_data_frame).mark_bar(orient="horizontal",color="#3b57e3").encode(alt.X(st.session_state["show_sales"],title=""),alt.Y("name",title="")),use_container_width=True
 )
 
+sales = []
+for data in inventory_data_frame:
+    sales.append(data[sales])
+
 priority_plot = (
-    alt.Chart(inventory_data_frame)
+    alt.Chart(sales)
     .mark_arc()
     .encode(theta="count():Q", color="Priority:N")
     .properties(height=300)
