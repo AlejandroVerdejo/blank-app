@@ -334,12 +334,14 @@ st.data_editor(inventory_data_frame,hide_index=True, use_container_width=True,co
         help="Ventas del producto en el ultimo mes",
         min_value=0,
         step=1,
+        disabled=True
     ),
     "t_sales":st.column_config.NumberColumn(
         "V. Totales",
         help="Ventas totales del producto",
         min_value=0,
         step=1,
+        disabled=True
     ),
     "category":st.column_config.SelectboxColumn(
         "Categoria",
