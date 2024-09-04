@@ -442,11 +442,11 @@ st.subheader("Balance")
 
 # Crea el grafico de lineas con los ingresos y gastos
 finances_chart_data = pd.DataFrame(
-    st.session_state["finances"],columns=["in","out"]
+    st.session_state["finances"],columns=["out","in"]
     )
 
 # Da nombre a las columnas(lineas)
-finances_chart_data.columns = ["Ingresos","Gastos"]
+finances_chart_data.columns = ["Gastos","Ingresos"]
 
 # Cambia el color de cada linea
 st.line_chart(finances_chart_data,color=["#de2f2f","#2fde5d"])
