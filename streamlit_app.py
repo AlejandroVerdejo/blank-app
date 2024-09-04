@@ -312,32 +312,38 @@ st.data_editor(inventory_data_frame,hide_index=True, use_container_width=True,co
     ),
     "units":st.column_config.NumberColumn(
         "Unidades",
+        help="Unidades en stock del producto",
         min_value=0,
         step=1,
     ),
     "price":st.column_config.NumberColumn(
         "Precio",
+        help="Precio del producto",
         min_value=0,
         step=1,
         format="%d€"
     ),
     "restock":st.column_config.NumberColumn(
         "Restock",
+        help="Cantidad a la que indicar que es necesario un restock",
         min_value=0,
         step=1,
     ),
     "l_sales":st.column_config.NumberColumn(
         "V. Ultimo mes",
+        help="Ventas del producto en el ultimo mes",
         min_value=0,
         step=1,
     ),
     "t_sales":st.column_config.NumberColumn(
         "V. Totales",
+        help="Ventas totales del producto",
         min_value=0,
         step=1,
     ),
     "category":st.column_config.SelectboxColumn(
         "Categoria",
+        help="Categoria del producto",
         options=categories,
         required=True
     )
