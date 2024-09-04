@@ -130,17 +130,6 @@ chart_data.columns = ["Ingresos","Gastos"]
 
 st.line_chart(chart_data)
 
-# Assuming df is your DataFrame and "x" and "y" are column names
-fig = px.line(chart_data, x="x",y="y")
-
-fig.update_layout(
-    xaxis=dict(
-        tickangle=-90,  # rotates the x-axis labels 90 degrees counter-clockwise
-    ),
-)
-
-st.plotly_chart(fig)
-
 # Create a DataFrame with 3 columns
 chart_data = pd.DataFrame(np.random.randn(20, 3), columns=["a", "b", "c"])
 
