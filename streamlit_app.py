@@ -120,7 +120,7 @@ tab2.bar_chart(finances["out"])
 st.subheader("Balance")
 
 chart_data = pd.DataFrame(
-    finances
+    finances,columns=["in","out"]
     #  np.random.randn(20, 3),
     #  columns=['a', 'b', 'c']
     )
