@@ -397,10 +397,10 @@ import plotly.graph_objects as go
 fig = go.Figure(data=[go.Pie(labels=inventory_data_frame.index, values=inventory_data_frame['l_sales'])])
 st.plotly_chart(fig)
 
-plost.pie_chart(
-    data=inventory_data_frame,
-    theta=st.session_state["show_sales"]
-)
+# plost.pie_chart(
+#     data=inventory_data_frame,
+#     theta=st.session_state["show_sales"]
+# )
 
 st.header("Finanzas")
 
