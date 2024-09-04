@@ -6,6 +6,13 @@ from faker import Faker
 import random
 import matplotlib.pyplot as plt
 
+st.set_page_config(
+    page_title="Main page",
+    page_icon="🧊",
+    layout="wide",
+    initial_sidebar_state="expanded"
+)
+
 # Crea un dialog para que el usuario introduzca datos
 @st.dialog("Cast your vote")
 def vote():
@@ -23,12 +30,6 @@ faker = Faker()
 # pg.run()
 
 st.title("New app.")
-st.set_page_config(
-    page_title="Main page",
-    page_icon="🧊",
-    layout="wide",
-    initial_sidebar_state="expanded"
-)
 # st.set_page_config(page_title="Main")
 # st.sidebar.title("Main page")
 
