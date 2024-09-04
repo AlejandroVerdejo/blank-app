@@ -125,4 +125,4 @@ chart_data = pd.DataFrame(
     #  columns=['a', 'b', 'c']
     )
 
-st.line_chart(chart_data,y_label=["Ingresos","Gastos"])
+st.line_chart(chart_data,x_label=["Ingresos","Gastos"])
