@@ -22,7 +22,7 @@ def vote():
         st.rerun()
 
 def tostada():
-    st.toast("Tostada")
+    st.toast("Tostadita")
 
 faker = Faker()
 
