@@ -3,6 +3,7 @@ import pandas as pd
 import numpy as np
 import altair as alt
 from faker import Faker
+import matplotlib.pyplot as plt
 import random
 
 @st.dialog("Cast your vote")
@@ -147,17 +148,14 @@ for i in range(1,20):
     sales.append(random.randrange(100,1000))
 
 # Create some sample data
-chart_data = pd.DataFrame(np.random.randn(20, 3), columns=["a", "b", "c"])
+data = {'a': 10, 'b': 15, 'c': 7, 'd': 18}
 
-# Create a circle chart
-c = (
-   alt.Chart(chart_data)
-   .mark_circle()
-   .encode(x="a", y="b", size="c", color="c", tooltip=["a", "b", "c"])
-)
+# Create a pie chart
+fig, ax = plt.subplots()
+ax.pie(data.values(), labels=data.keys(), autopct='%1.1f%%')
 
 # Display the chart
-st.altair_chart(c, use_container_width=True)
+st.pyplot(fig)
 
 st.header("Finanzas")
 
