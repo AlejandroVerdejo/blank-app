@@ -6,6 +6,7 @@ from faker import Faker
 import random
 import matplotlib.pyplot as plt
 
+# Configuracion de la pagina
 st.set_page_config(
     page_title="Main page",
     page_icon="🧊",
@@ -442,11 +443,11 @@ st.subheader("Balance")
 
 # Crea el grafico de lineas con los ingresos y gastos
 finances_chart_data = pd.DataFrame(
-    st.session_state["finances"],columns=["out","in"]
+    st.session_state["finances"],columns=["out"]
     )
 
 # Da nombre a las columnas(lineas)
-finances_chart_data.columns = ["Gastos","Ingresos"]
+finances_chart_data.columns = ["Ingresos","Gastos"]
 
 # Cambia el color de cada linea
 st.line_chart(finances_chart_data,color=["#de2f2f","#2fde5d"])
