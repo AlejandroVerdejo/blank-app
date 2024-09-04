@@ -581,11 +581,6 @@ dtf_yearly_data = pd.DataFrame(
 
 dtf_yearly_data.columns = ["1-Ingresos","2-Gastos"]
 
-with finances_monthly_tab:
-    year_radio = st.radio(label="",options=YEARS,horizontal=True,index=YEARS.index(st.session_state["finances_year"]))
-
-st.session_state["finances_year"] = year_radio
-
 # finances_monthly_tab.line_chart(dtf_monthly_data,x_label=st.session_state["finances_year"],color=["#2fde5d","#de2f2f"])
 finances_yearly_tab.line_chart(dtf_yearly_data,color=["#2fde5d","#de2f2f"])
 with finances_monthly_tab:
