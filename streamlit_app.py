@@ -312,7 +312,7 @@ st.data_editor(inventory_data_frame,hide_index=True, use_container_width=True,co
         "Precio",
         min_value=0,
         step=1,
-        format="$%d"
+        format="€%d"
     ),
     "restock":"Restock",
     "l_sales":"V. Ultimo mes",
