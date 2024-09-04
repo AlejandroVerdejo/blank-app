@@ -129,10 +129,6 @@ inventory_tab_1.altair_chart(
     +alt.Chart(inventory_data_frame).mark_point(shape="diamond",filled=True,size=50,color="red",opacity=1).encode(x="restock",y="name"),use_container_width=True
     )
 
-inventory_tab_2.altair_chart(
-    alt.Chart(inventory_data_frame).mark_bar(orient="horizontal",color="#3b57e3").encode(alt.X(st.session_state["show_sales"],title=""),alt.Y("name",title="")),use_container_width=True
-)
-
 with inventory_tab_2:
     sales_radio = st.radio(label="",options=["Ultimo mes","Totales"],horizontal=True,key="sales_radio")
 
@@ -140,6 +136,10 @@ if sales_radio == "Ultimo mes":
     st.session_state["show_sales"] = "l_sales"
 else:
     st.session_state["show_sales"] = "t_sales"
+
+inventory_tab_2.altair_chart(
+    alt.Chart(inventory_data_frame).mark_bar(orient="horizontal",color="#3b57e3").encode(alt.X(st.session_state["show_sales"],title=""),alt.Y("name",title="")),use_container_width=True
+)
 
 st.header("Finanzas")
 
