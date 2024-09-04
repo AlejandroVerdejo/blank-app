@@ -127,6 +127,14 @@ chart_data = pd.DataFrame(
 
 st.line_chart(chart_data,x_label=["Ingresos","Gastos"])
 
+# Create a DataFrame with 3 columns
 chart_data = pd.DataFrame(np.random.randn(20, 3), columns=["a", "b", "c"])
 
-st.line_chart(chart_data, x="a", y="b,c", x_label="New X Label", y_label="New Y Label")
+# Plot the DataFrame using st.line_chart
+st.line_chart(chart_data)
+
+# Rename the columns
+chart_data.columns = ["New Label 1", "New Label 2", "New Label 3"]
+
+# Plot the DataFrame using st.line_chart
+st.line_chart(chart_data)
