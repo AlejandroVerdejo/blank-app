@@ -18,7 +18,7 @@ def tostada():
 
 faker = Faker()
 
-st.navigation()
+st.navigation([st.Page("streamlit_app.py")])
 
 st.title("New app.")
 # st.set_page_config(page_title="Main")
