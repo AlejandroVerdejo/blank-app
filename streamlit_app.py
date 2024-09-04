@@ -270,6 +270,12 @@ if "y_finances" not in st.session_state:
 if "show_sales" not in st.session_state:
     st.session_state["show_sales"] = "l_sales"
 
+if "finances_year" not in st.session_state:
+    st.session_state["finances_year"] = "collapsed"
+
+if "finances_year" not in st.session_state:
+    st.session_state["finances_year"] = 2023
+
 col1,col2 = st.columns(2)
 
 col1.button("Click",on_click=vote,use_container_width=True)
@@ -349,6 +355,15 @@ inventory_tab_2.altair_chart(
 st.header("Finanzas")
 
 finances_show_mode = st.radio(label="",options=["Anuales","Mensuales"],horizontal=True)
+
+if finances_show_mode == "Anuales":
+    st.session_state["finances_yearly"] = "collapsed"
+else:
+    st.session_state["finances_yearly"] = "visible"
+
+select = st.selectbox(label="",options=[2018,2019,2020,2021,2022,2023,2024])
+
+
 
 finances_tab_1,finances_tab_2 = st.tabs(["Ingresos","Gastos"])
 
