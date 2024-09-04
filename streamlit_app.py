@@ -38,22 +38,22 @@ for i in range(1,15):
 
 finances = {
     "in":{
-        "2018":random.randrange(1000,2500),
-        "2019":random.randrange(1000,2500),
-        "2020":random.randrange(1000,2500),
-        "2021":random.randrange(1000,2500),
-        "2022":random.randrange(1000,2500),
-        "2023":random.randrange(1000,2500),
-        "2024":random.randrange(1000,2500),
+        "2018":random.randrange(100000,250000),
+        "2019":random.randrange(100000,250000),
+        "2020":random.randrange(100000,250000),
+        "2021":random.randrange(100000,250000),
+        "2022":random.randrange(100000,250000),
+        "2023":random.randrange(100000,250000),
+        "2024":random.randrange(100000,250000),
     },
     "out":{
-        "2018":random.randrange(1000,2500),
-        "2019":random.randrange(1000,2500),
-        "2020":random.randrange(1000,2500),
-        "2021":random.randrange(1000,2500),
-        "2022":random.randrange(1000,2500),
-        "2023":random.randrange(1000,2500),
-        "2024":random.randrange(1000,2500),
+        "2018":random.randrange(100000,250000),
+        "2019":random.randrange(100000,250000),
+        "2020":random.randrange(100000,250000),
+        "2021":random.randrange(100000,250000),
+        "2022":random.randrange(100000,250000),
+        "2023":random.randrange(100000,250000),
+        "2024":random.randrange(100000,250000),
     }          
 }
 
