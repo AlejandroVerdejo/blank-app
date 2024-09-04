@@ -591,6 +591,6 @@ dtf_yearly_data.columns = ["1-Ingresos","2-Gastos"]
 
 finances_monthly_tab.line_chart(dtf_monthly_data,x_label=selected_year,color=["#2fde5d","#de2f2f"])
 with finances_monthly_tab:
-    year_radio = st.radio(options=["2020","2021","2022","2023"])
+    year_radio = st.radio(label="",options=["2020","2021","2022","2023"],horizontal=True)
 finances_yearly_tab.line_chart(dtf_yearly_data,color=["#2fde5d","#de2f2f"])
 
