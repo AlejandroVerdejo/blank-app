@@ -113,7 +113,7 @@ if count > 0:
                     item_restock_warning = " ·~ " + i["name"] + " - " + str(i["units"]) + " unidades (" + str(i["restock"]) + ")."
                     st.write(item_restock_warning)
 
-st.altair_chart(
+inventory_tab_1.altair_chart(
     # alt.Chart(data_frame).mark_bar(orient="horizontal").encode(x="units",y="name")
     alt.Chart(data_frame).mark_bar(orient="horizontal",color="#3b57e3").encode(alt.X("units",title="Unidades"),alt.Y("name",title="Nombres"))
     +alt.Chart(data_frame).mark_point(shape="diamond",filled=True,size=50,color="red",opacity=1).encode(x="restock",y="name"),use_container_width=True
