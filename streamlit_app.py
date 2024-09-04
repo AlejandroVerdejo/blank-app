@@ -42,7 +42,8 @@ if "data" not in st.session_state:
             "price":random.randrange(1,50),
             "restock":random.randrange(1,100),
             "l_sales":last_month_sales,
-            "t_sales":random.randrange(last_month_sales,500)
+            "t_sales":random.randrange(last_month_sales,500),
+            "category":random.choice(["alimento","ropa","medicina"])
         })
 
 if "finances" not in st.session_state:
@@ -307,7 +308,8 @@ st.dataframe(inventory_data_frame,hide_index=True, use_container_width=True,colu
     "price":"Precio",
     "restock":"Restock",
     "l_sales":"Ventas ultimo mes",
-    "t_sales":"Ventas totales"
+    "t_sales":"Ventas totales",
+    "category":"Categoria"
 })
 
 # st.bar_chart(data=data_frame,x="name",x_label="Stock",y="units",y_label="Items", horizontal=True)
