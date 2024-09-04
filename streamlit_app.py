@@ -521,8 +521,8 @@ yearly_data = {
 }
 
 for year in st.session_state["prueba"]["in"].keys():
-    yearly_data["in"][year] += sum(st.session_state["prueba"]["in"][year].values())
-    yearly_data["out"][year] += sum(st.session_state["prueba"]["out"][year].values())
+    yearly_data["in"][year] = sum(st.session_state["prueba"]["in"][year].values())
+    yearly_data["out"][year] = sum(st.session_state["prueba"]["out"][year].values())
 
 dtf_yearly_data = pd.DataFrame(
     yearly_data,columns=["in","out"]
