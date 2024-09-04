@@ -392,9 +392,14 @@ inventory_tab_2.altair_chart(
     alt.Chart(inventory_data_frame).mark_bar(orient="horizontal",color="#3b57e3").encode(alt.X(st.session_state["show_sales"],title=""),alt.Y("name",title="")),use_container_width=True
 )
 
+import plotly.graph_objects as go
+
+fig = go.Figure(data=[go.Pie(labels=inventory_data_frame.index, values=inventory_data_frame['your_column_name'])])
+st.plotly_chart(fig)
+
 plost.pie_chart(
     data=inventory_data_frame,
-    theta='l_sales'
+    theta=st.session_state["show_sales"]
 )
 
 st.header("Finanzas")
