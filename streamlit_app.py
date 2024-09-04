@@ -71,6 +71,8 @@ col2.button("Tostada",on_click=tostada,use_container_width=True)
 
 st.header("Inventario")
 
+inventory_tab_1,inventory_tab_2 = st.tabs(["Existencias","Ventas"])
+
 data_frame = pd.DataFrame(data)
 
 st.dataframe(data_frame,hide_index=True, use_container_width=True,column_config={
