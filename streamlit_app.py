@@ -437,7 +437,7 @@ finances_chart_data = pd.DataFrame(
 finances_chart_data.columns = ["1-Ingresos","2-Gastos"]
 
 # Cambia el color de cada linea
-st.line_chart(finances_chart_data,color=["#de2f2f","#2fde5d"])
+st.line_chart(finances_chart_data,color=["#2fde5d","#de2f2f"])
 
 if "prueba" not in st.session_state:
     st.session_state["prueba"] = {
