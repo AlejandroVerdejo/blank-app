@@ -5,6 +5,7 @@ import altair as alt
 from faker import Faker
 import random
 import matplotlib.pyplot as plt
+import plotly.graph_objects as go
 import plost
 
 # Configuracion de la pagina #! Siempre al principio
@@ -387,14 +388,14 @@ if sales_radio == "Ultimo mes":
 else:
     st.session_state["show_sales"] = "t_sales"
 
-# Mostrara las ventas de los productos, mostrando las totales o las del ultimo mes segun la variable de sesion
+# Mostrara las ventas de los productos, mostrando las totales o las del ultimo mes segun la variable de sesion #* Con grafico de barras
 # inventory_tab_2.altair_chart(
 #     alt.Chart(inventory_data_frame).mark_bar(orient="horizontal",color="#3b57e3").encode(alt.X(st.session_state["show_sales"],title=""),alt.Y("name",title="")),use_container_width=True
 # )
 
-import plotly.graph_objects as go
-
+# Mostrara las ventas de los productos, mostrando las totales o las del ultimo mes segun la variable de sesion #* Con grafico de quesitos
 fig = go.Figure(data=[go.Pie(labels=inventory_data_frame["name"], values=inventory_data_frame[st.session_state["show_sales"]])])
+fig.update_layout(width=800, height=600)
 inventory_tab_2.plotly_chart(fig)
 
 # plost.pie_chart(
