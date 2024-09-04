@@ -2,3 +2,4 @@ streamlit
 faker
 matplotlib
 streamlit-tags
+plost

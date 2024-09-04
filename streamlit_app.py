@@ -5,6 +5,7 @@ import altair as alt
 from faker import Faker
 import random
 import matplotlib.pyplot as plt
+import plost
 
 # Configuracion de la pagina #! Siempre al principio
 st.set_page_config(
