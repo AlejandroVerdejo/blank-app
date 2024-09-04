@@ -449,4 +449,5 @@ prueba = {
         }    
     }    
 }
+st.write(prueba["in"]["2021"].keys())
 st.write(sum(prueba["in"]["2021"].values()))
