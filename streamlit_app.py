@@ -146,16 +146,18 @@ for i in range(1,20):
     # sales.append(data["l_sales"])
     sales.append(random.randrange(100,1000))
 
-priority_plot = (
-    alt.Chart(sales)
-    .mark_arc()
-    .encode(theta="count():Q", color="Priority:N")
-    .properties(height=300)
-    .configure_legend(
-        orient="bottom", titleFontSize=14, labelFontSize=14, titlePadding=5
-    )
+# Create some sample data
+chart_data = pd.DataFrame(np.random.randn(20, 3), columns=["a", "b", "c"])
+
+# Create a circle chart
+c = (
+   alt.Chart(chart_data)
+   .mark_circle()
+   .encode(x="a", y="b", size="c", color="c", tooltip=["a", "b", "c"])
 )
-st.altair_chart(priority_plot, use_container_width=True, theme="streamlit")
+
+# Display the chart
+st.altair_chart(c, use_container_width=True)
 
 st.header("Finanzas")
 
