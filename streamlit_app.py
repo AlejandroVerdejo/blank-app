@@ -504,16 +504,30 @@ if "prueba" not in st.session_state:
     }
 # st.write(prueba["in"]["2021"].keys())
 # st.write(sum(prueba["in"]["2021"].values()))
-montly_data = pd.DataFrame(
-    # st.session_state[]    
-)
 selected_year = "2021"
 selected_year_data = {
     "in":st.session_state["prueba"]["in"][selected_year].values(),
     "out":st.session_state["prueba"]["out"][selected_year].values()
 }
-yearly_data = pd.DataFrame(
+
+dtf_montly_data = pd.DataFrame(
     selected_year_data,columns=["in","out"]
+    # st.session_state[]    
 )
-st.line_chart(yearly_data)
+
+yearly_data = {
+    "in":{},
+    "out":{}
+}
+
+for year in st.session_state["prueba"]["in"].keys():
+    yearly_data["in"][year] += sum(st.session_state["prueba"]["in"][year].values())
+    yearly_data["out"][year] += sum(st.session_state["prueba"]["out"][year].values())
+
+dtf_yearly_data = pd.DataFrame(
+    yearly_data,columns=["in","out"]
+)
+
+st.line_chart(dtf_montly_data)
+st.line_chart(dtf_yearly_data)
 
