@@ -402,8 +402,6 @@ plost.pie_chart(
     data=inventory_data_frame["name"],
     theta=st.session_state["show_sales"],
     color=None,
-    width=None,
-    height=None,
     title=None,
     legend=None
 )
