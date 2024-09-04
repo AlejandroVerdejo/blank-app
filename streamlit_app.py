@@ -331,7 +331,6 @@ finances_chart_data.columns = ["1-Ingresos","2-Gastos"]
 st.line_chart(finances_chart_data,color=["#2fde5d","#de2f2f"])
 
 finances_yearly_tab, finances_monthly_tab = st.tabs(["Anual","Mensual"])
-selected_year = st.session_state["finances_year"]
 
 # st.write(prueba["in"]["2021"].keys())
 # st.write(sum(prueba["in"]["2021"].values()))
