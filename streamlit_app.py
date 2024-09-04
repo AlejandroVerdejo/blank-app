@@ -99,7 +99,7 @@ if count > 0:
             # st.write("x")
             for i in data:
                 if i["restock"] > i["units"]:
-                    item_restock_warning = "·-" + i["name"] 
+                    item_restock_warning = "·-" + i["name"] + " - " + i["units"] + " unidades."
                     st.write(item_restock_warning)
     else:
         # st.warning(f"Hay {count} elementos por debajo del numero de restock")
@@ -108,7 +108,7 @@ if count > 0:
             # st.write("x")
             for i in data:
                 if i["restock"] > i["units"]:
-                    item_restock_warning = "·-" + i["name"] 
+                    item_restock_warning = "·-" + i["name"] + " - " + i["units"] + " unidades."
                     st.write(item_restock_warning)
 
 st.altair_chart(
