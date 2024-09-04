@@ -132,3 +132,6 @@ chart_data = pd.DataFrame(
     )
 
 chart_data.columns = ["Ingresos","Gastos"]
+
+st.line_chart(chart_data)
+
