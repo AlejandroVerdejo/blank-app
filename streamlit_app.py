@@ -449,4 +449,4 @@ prueba = {
         }    
     }    
 }
-st.write(prueba["in"]["2021"]["Enero"])
+st.write(sum(prueba["in"]["2021"].values()))
