@@ -572,7 +572,6 @@ dtf_monthly_data = pd.DataFrame(
 )
 dtf_monthly_data.columns = ["1-Ingresos","2-Gastos"]
 
-
 yearly_data = {
     "in":{},
     "out":{}
@@ -588,6 +587,6 @@ dtf_yearly_data = pd.DataFrame(
 
 dtf_yearly_data.columns = ["1-Ingresos","2-Gastos"]
 
-st.line_chart(dtf_monthly_data)
+st.line_chart(dtf_monthly_data,x_label=selected_year)
 st.line_chart(dtf_yearly_data)
 
