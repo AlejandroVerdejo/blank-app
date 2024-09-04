@@ -130,9 +130,9 @@ inventory_tab_1.altair_chart(
     )
 
 with inventory_tab_2:
-    sales_radio = st.radio(label="",options=["l_sales","t_sales"],horizontal=True,key="sales_radio")
+    sales_radio = st.radio(label="",options=["Ultimo mes","Totales"],horizontal=True,key="sales_radio")
 
-if sales_radio == "l_sales":
+if sales_radio == "Ultimo mes":
     st.session_state["show_sales"] = "l_sales"
 else:
     st.session_state["show_sales"] = "t_sales"
