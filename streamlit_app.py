@@ -438,3 +438,15 @@ finances_chart_data.columns = ["Ingresos","Gastos"]
 
 # Cambia el color de cada linea
 st.line_chart(finances_chart_data,color=["#de2f2f","#2fde5d"])
+
+prueba = {
+    "in":{
+        "2020":100,
+        "2021":{
+            "Enero":100,
+            "Febrero":50,
+            "Marzo":30
+        }    
+    }    
+}
+st.write(sum(prueba["in"]["2021"]))
