@@ -6,7 +6,7 @@ from faker import Faker
 import random
 import matplotlib.pyplot as plt
 
-# Configuracion de la pagina
+# Configuracion de la pagina #! Siempre al principio
 st.set_page_config(
     page_title="Main page",
     page_icon="🧊",
@@ -27,17 +27,7 @@ def tostada():
 
 faker = Faker()
 
-# pg = st.navigation([st.Page("streamlit_app.py")],position="sidebar")
-# pg.run()
-
 st.title("New app.")
-# st.set_page_config(page_title="Main")
-# st.sidebar.title("Main page")
-
-# st.markdown("")
-# st.sidebar.markdown("# Main page")
-
-# st.Page(title="Main page")
 
 # Opciones para las categorias de los elementos
 categories = ["alimento","ropa","medicina"]
