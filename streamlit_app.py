@@ -562,8 +562,8 @@ if "prueba" not in st.session_state:
 # st.write(sum(prueba["in"]["2021"].values()))
 selected_year = "2021"
 selected_year_data = {
-    "in":st.session_state["prueba"]["in"][selected_year].values(),
-    "out":st.session_state["prueba"]["out"][selected_year].values()
+    "in":st.session_state["prueba"]["in"][selected_year],
+    "out":st.session_state["prueba"]["out"][selected_year]
 }
 
 dtf_monthly_data = pd.DataFrame(
