@@ -31,6 +31,9 @@ st.title("New app.")
 
 # st.Page(title="Main page")
 
+# Opciones para las categorias de los elementos
+choices = ["alimento","ropa","medicina"]
+
 # Guarda los datos en la sesion para mantenerlos en los refrescos de la pagina
 if "data" not in st.session_state:
     st.session_state["data"] = []
@@ -43,7 +46,7 @@ if "data" not in st.session_state:
             "restock":random.randrange(1,100),
             "l_sales":last_month_sales,
             "t_sales":random.randrange(last_month_sales,500),
-            "category":random.choice(["alimento","ropa","medicina"])
+            "category":random.choice(choices)
         })
 
 if "finances" not in st.session_state:
