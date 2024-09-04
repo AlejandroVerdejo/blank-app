@@ -9,7 +9,6 @@ import matplotlib.pyplot as plt
 # Configuracion de la pagina #! Siempre al principio
 st.set_page_config(
     page_title="Main page",
-    page_icon="🧊",
     layout="wide",
     initial_sidebar_state="expanded"
 )
