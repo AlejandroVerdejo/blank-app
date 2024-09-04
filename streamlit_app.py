@@ -289,15 +289,7 @@ col1.button("Click",on_click=vote,use_container_width=True)
 # Añade un boton a la segunda columna
 col2.button("Tostada",on_click=tostada,use_container_width=True)
 
-# click = st.button("Click",on_click=vote)
-
-# data_frame = pd.DataFrame({
-#     "first column":[1,2,3,4],
-#     "second column":[10,20,30,40]
-# })
-
 st.header("Inventario")
-
 
 inventory_data_frame = pd.DataFrame(st.session_state["data"])
 
@@ -419,7 +411,6 @@ st.header("Finanzas")
 # for data in st.session_state["finances"]["in"]:
 #     finances_data["in"]
 
-
 # Crea dos tabs para Ingresos y Gastos
 finances_tab_1,finances_tab_2 = st.tabs(["Ingresos","Gastos"])
 
@@ -440,4 +431,3 @@ finances_chart_data.columns = ["Ingresos","Gastos"]
 
 # Cambia el color de cada linea
 st.line_chart(finances_chart_data,color=["#de2f2f","#2fde5d"])
-
