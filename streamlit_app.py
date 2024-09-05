@@ -374,7 +374,7 @@ dtf_yearly_data = pd.DataFrame(
 dtf_yearly_data.columns = ["1-Ingresos","2-Gastos"]
 
 finances_yearly_tab.subheader("Balance")
-finances_monthly_tab.subheader("Balance")
+# finances_monthly_tab.subheader("Balance")
 
 finances_yearly_tab.line_chart(dtf_yearly_data,color=["#2fde5d","#de2f2f"])
 with finances_monthly_tab:
@@ -390,5 +390,6 @@ with finances_monthly_tab:
             # st.session_state[]    
         )
         dtf_monthly_data.columns = ["1-Ingresos","2-Gastos"]
+        tabs[i].subheader("Balance")
         tabs[i].line_chart(dtf_monthly_data,x_label=YEARS[i],color=["#2fde5d","#de2f2f"])
 
