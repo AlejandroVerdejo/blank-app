@@ -79,12 +79,12 @@ if "show_sales" not in st.session_state:
     # st.session_state["finances_mode"] = "yearly"
 
 # Crea un contenedor divido en dos columnas
-col1,col2 = st.columns(2)
+# col1,col2 = st.columns(2)
 
 # Añade un boton a la primera columna
-col1.button("Click",on_click=vote,use_container_width=True)
+# col1.button("Click",on_click=vote,use_container_width=True)
 # Añade un boton a la segunda columna
-col2.button("Tostada",on_click=tostada,use_container_width=True)
+# col2.button("Tostada",on_click=tostada,use_container_width=True)
 
 st.header("Inventario")
 
@@ -234,6 +234,7 @@ st.header("Finanzas")
 # # Cambia el color de cada linea
 # st.line_chart(finances_chart_data,color=["#2fde5d","#de2f2f"])
 
+# Crea los tabs para dividir las finanzas entre anuales y mensuales
 finances_yearly_tab, finances_monthly_tab = st.tabs(["Anual","Mensual"])
 
 if "prueba" not in st.session_state:
@@ -363,20 +364,26 @@ yearly_data = {
     "out":{}
 }
 
+# Suma los meses de cada año para tener los datos anuales
 for year in st.session_state["prueba"]["in"].keys():
     yearly_data["in"][year] = sum(st.session_state["prueba"]["in"][year].values())
     yearly_data["out"][year] = sum(st.session_state["prueba"]["out"][year].values())
 
+# Crea el dataframe con los ingresos y gastos
 dtf_yearly_data = pd.DataFrame(
     yearly_data,columns=["in","out"]
 )
 
+# Da nombre a las columnas
 dtf_yearly_data.columns = ["1-Ingresos","2-Gastos"]
 
+# Crea dos columnas en el tab Anuales para los graficos de barras
 with finances_yearly_tab:
     finances_yearly_tab_col1, finances_yearly_tab_col2 = st.columns(2)
 
+# Añade el grafico de barras de Ingresos anuales
 finances_yearly_tab_col1.bar_chart(yearly_data["in"],color="#2fde5d")
+# Añade el grafico de barras de Gastos anuales
 finances_yearly_tab_col2.bar_chart(yearly_data["out"],color="#de2f2f")
 
 finances_yearly_tab.subheader("Balance")
