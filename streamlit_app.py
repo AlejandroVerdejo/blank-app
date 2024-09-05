@@ -397,8 +397,8 @@ with finances_monthly_tab:
         )
         with tabs[i]:
             finances_monthly_tab_col1, finances_monthly_tab_col2 = st.columns(2)
-        finances_monthly_tab_col1.write("a")
-        finances_monthly_tab_col2.write("b")
+        finances_monthly_tab_col1.bar_chart(selected_year_data["in"],color="#2fde5d")
+        finances_monthly_tab_col2.bar_chart(yearly_data["out"],color="#de2f2f")
         
         dtf_monthly_data.columns = ["1-Ingresos","2-Gastos"]
         tabs[i].subheader("Balance")
