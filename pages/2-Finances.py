@@ -131,7 +131,7 @@ if "finances" not in st.session_state:
         }    
     }
 
-st.header("Finanzas")
+st.title("Finanzas")
 
 # Crea los tabs para dividir las finanzas entre anuales y mensuales
 finances_yearly_tab, finances_monthly_tab = st.tabs(["Anual","Mensual"])
