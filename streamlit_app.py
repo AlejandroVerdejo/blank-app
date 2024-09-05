@@ -373,6 +373,9 @@ dtf_yearly_data = pd.DataFrame(
 
 dtf_yearly_data.columns = ["1-Ingresos","2-Gastos"]
 
+finances_yearly_tab.subheader("Balance")
+finances_monthly_tab.subheader("Balance")
+
 finances_yearly_tab.line_chart(dtf_yearly_data,color=["#2fde5d","#de2f2f"])
 with finances_monthly_tab:
     tabs = st.tabs(st.session_state["prueba"]["in"].keys())
