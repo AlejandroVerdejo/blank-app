@@ -376,8 +376,8 @@ dtf_yearly_data.columns = ["1-Ingresos","2-Gastos"]
 with finances_yearly_tab:
     finances_yearly_tab_col1, finances_yearly_tab_col2 = st.columns(2)
 
-finances_yearly_tab_col1.bar_chart(dtf_yearly_data["in"],color="#2fde5d")
-finances_yearly_tab_col2.bar_chart(dtf_yearly_data["out"],color="#de2f2f")
+finances_yearly_tab_col1.bar_chart(st.session_state["finances"]["in"],color="#2fde5d")
+finances_yearly_tab_col2.bar_chart(st.session_state["finances"]["out"],color="#de2f2f")
 
 finances_yearly_tab.subheader("Balance")
 # finances_monthly_tab.subheader("Balance")
