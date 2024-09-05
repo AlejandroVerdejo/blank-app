@@ -409,8 +409,10 @@ with finances_monthly_tab:
         # Crea las columnas para los graficos de barras para ese año
         with tabs[i]:
             finances_monthly_tab_col1, finances_monthly_tab_col2 = st.columns(2)
+        finances_monthly_tab_col1.write("Ingresos")
         # Añade el grafico de barras de Ingresos de ese año
         finances_monthly_tab_col1.bar_chart(selected_year_data["in"],color="#2fde5d")
+        finances_monthly_tab_col2.write("Gastos")
         # Añade el grafico de barras de Gastos de ese año
         finances_monthly_tab_col2.bar_chart(selected_year_data["out"],color="#de2f2f")
         
