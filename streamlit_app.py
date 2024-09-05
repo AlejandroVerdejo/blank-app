@@ -214,14 +214,14 @@ st.header("Finanzas")
 #     finances_data["in"]
 
 # Crea dos tabs para Ingresos y Gastos
-finances_tab_1,finances_tab_2 = st.tabs(["Ingresos","Gastos"])
+# finances_tab_1,finances_tab_2 = st.tabs(["Ingresos","Gastos"])
 
 # Añade la tabla de los ingresos al primer tab
-finances_tab_1.bar_chart(st.session_state["finances"]["in"],color="#2fde5d")
+# finances_tab_1.bar_chart(st.session_state["finances"]["in"],color="#2fde5d")
 # Añade la tabla de los ingresos al segundo tab
-finances_tab_2.bar_chart(st.session_state["finances"]["out"],color="#de2f2f")
+# finances_tab_2.bar_chart(st.session_state["finances"]["out"],color="#de2f2f")
 
-st.subheader("Balance")
+# st.subheader("Balance")
 
 # # Crea el grafico de lineas con los ingresos y gastos
 # finances_chart_data = pd.DataFrame(
