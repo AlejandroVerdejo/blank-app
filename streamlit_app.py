@@ -397,8 +397,8 @@ with finances_monthly_tab:
         )
         with tabs[i]:
             finances_monthly_tab_col1, finances_monthly_tab_col2 = st.columns(2)
-        finances_yearly_tab_col1.write("a")
-        finances_yearly_tab_col2.write("b")
+        finances_monthly_tab_col1.write("a")
+        finances_monthly_tab_col2.write("b")
         
         dtf_monthly_data.columns = ["1-Ingresos","2-Gastos"]
         tabs[i].subheader("Balance")
