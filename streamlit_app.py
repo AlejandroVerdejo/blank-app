@@ -195,45 +195,6 @@ inventory_tab_2.plotly_chart(fig)
 
 st.header("Finanzas")
 
-# finances_show_mode = st.radio(label="",options=["Anuales","Mensuales"],horizontal=True)
-
-# if finances_show_mode == "Anuales":
-#     st.session_state["finances_mode"] = "yearly"
-# else:
-#     st.session_state["finances_mode"] = "monthly"
-
-# if st.session_state["finances_mode"] == "monthly":
-#     select = st.selectbox(label="",options=[2018,2019,2020,2021,2022,2023,2024])
-
-# finances_data = {
-#     "in":{},
-#     "out":{}
-# }
-
-# for data in st.session_state["finances"]["in"]:
-#     finances_data["in"]
-
-# Crea dos tabs para Ingresos y Gastos
-# finances_tab_1,finances_tab_2 = st.tabs(["Ingresos","Gastos"])
-
-# Añade la tabla de los ingresos al primer tab
-# finances_tab_1.bar_chart(st.session_state["finances"]["in"],color="#2fde5d")
-# Añade la tabla de los ingresos al segundo tab
-# finances_tab_2.bar_chart(st.session_state["finances"]["out"],color="#de2f2f")
-
-# st.subheader("Balance")
-
-# # Crea el grafico de lineas con los ingresos y gastos
-# finances_chart_data = pd.DataFrame(
-#     st.session_state["finances"],columns=["in","out"]
-#     )
-
-# # Da nombre a las columnas(lineas)
-# finances_chart_data.columns = ["1-Ingresos","2-Gastos"]
-
-# # Cambia el color de cada linea
-# st.line_chart(finances_chart_data,color=["#2fde5d","#de2f2f"])
-
 # Crea los tabs para dividir las finanzas entre anuales y mensuales
 finances_yearly_tab, finances_monthly_tab = st.tabs(["Anual","Mensual"])
 
@@ -382,9 +343,9 @@ with finances_yearly_tab:
     finances_yearly_tab_col1, finances_yearly_tab_col2 = st.columns(2)
 
 # Añade el grafico de barras de Ingresos anuales
-finances_yearly_tab_col1.bar_chart(yearly_data["in"],color="#2fde5d")
+finances_yearly_tab_col1.bar_chart(yearly_data["in"],color="#2fde5d",x_label="Ingresos")
 # Añade el grafico de barras de Gastos anuales
-finances_yearly_tab_col2.bar_chart(yearly_data["out"],color="#de2f2f")
+finances_yearly_tab_col2.bar_chart(yearly_data["out"],color="#de2f2f",x_label="Gastos")
 
 finances_yearly_tab.subheader("Balance")
 
