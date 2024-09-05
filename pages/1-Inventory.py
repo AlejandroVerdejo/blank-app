@@ -1,6 +1,8 @@
 import streamlit as st
 import random
-import faker
+from faker import Faker
+
+faker = Faker()
 
 categories = ["alimento","ropa","medicina"]
 

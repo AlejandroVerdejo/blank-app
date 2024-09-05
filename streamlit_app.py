@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 import altair as alt
-import faker
+from faker import Faker
 import random
 import plotly.graph_objects as go
 
@@ -22,6 +22,8 @@ def vote():
 
 def tostada():
     st.toast("Tostadita")
+
+faker = Faker()
 
 YEARS = ["2020","2021","2022","2023"]
 
