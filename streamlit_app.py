@@ -1,12 +1,9 @@
 import streamlit as st
 import pandas as pd
-import numpy as np
 import altair as alt
 from faker import Faker
 import random
-import matplotlib.pyplot as plt
 import plotly.graph_objects as go
-import plost
 
 # Configuracion de la pagina #! Siempre al principio
 st.set_page_config(
