@@ -30,7 +30,7 @@ faker = Faker()
 
 YEARS = ["2020","2021","2022","2023"]
 
-st.title("New app.")
+# st.title("New app.")
 
 # Opciones para las categorias de los elementos
 categories = ["alimento","ropa","medicina"]
