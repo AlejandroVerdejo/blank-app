@@ -5,6 +5,13 @@ import altair as alt
 import pandas as pd
 import plotly.graph_objects as go
 
+# Configuracion de la pagina #! Siempre al principio
+st.set_page_config(
+    page_title="Main page",
+    layout="wide",
+    initial_sidebar_state="expanded"
+)
+
 faker = Faker()
 
 categories = ["alimento","ropa","medicina"]

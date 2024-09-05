@@ -1,6 +1,13 @@
 import streamlit as st
 import random
 
+# Configuracion de la pagina #! Siempre al principio
+st.set_page_config(
+    page_title="Main page",
+    layout="wide",
+    initial_sidebar_state="expanded"
+)
+
 YEARS = ["2020","2021","2022","2023"]
 
 if "finances" not in st.session_state:
