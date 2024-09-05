@@ -3,6 +3,7 @@ import random
 from faker import Faker
 import altair as alt
 import pandas as pd
+import plotly.graph_objects as go
 
 faker = Faker()
 
