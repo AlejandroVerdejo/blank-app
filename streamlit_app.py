@@ -395,6 +395,11 @@ with finances_monthly_tab:
             selected_year_data,columns=["in","out"]
             # st.session_state[]    
         )
+        with tabs[i]:
+            finances_monthly_tab_col1, finances_monthly_tab_col2 = st.columns(2)
+        finances_yearly_tab_col1.write("a")
+        finances_yearly_tab_col2.write("b")
+        
         dtf_monthly_data.columns = ["1-Ingresos","2-Gastos"]
         tabs[i].subheader("Balance")
         tabs[i].line_chart(dtf_monthly_data,x_label=YEARS[i],color=["#2fde5d","#de2f2f"])
