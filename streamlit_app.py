@@ -424,9 +424,9 @@ yearly_data = {
 }
 
 # Suma los meses de cada año para tener los datos anuales
-for year in st.session_state["prueba"]["in"].keys():
-    yearly_data["in"][year] = sum(st.session_state["prueba"]["in"][year].values())
-    yearly_data["out"][year] = sum(st.session_state["prueba"]["out"][year].values())
+for year in st.session_state["finances"]["in"].keys():
+    yearly_data["in"][year] = sum(st.session_state["finances"]["in"][year].values())
+    yearly_data["out"][year] = sum(st.session_state["finances"]["out"][year].values())
 
 # Crea el dataframe con los ingresos y gastos
 dtf_yearly_data = pd.DataFrame(
@@ -452,12 +452,12 @@ finances_yearly_tab.line_chart(dtf_yearly_data,color=["#2fde5d","#de2f2f"])
 
 with finances_monthly_tab:
     # Crea los tabs para cada año en el tab de finanzas mensuales
-    tabs = st.tabs(st.session_state["prueba"]["in"].keys())
+    tabs = st.tabs(st.session_state["finances"]["in"].keys())
     for i in range(0,len(tabs)):
         # Guarda los datos de los meses del año de ese tab
         selected_year_data = {
-            "in":st.session_state["prueba"]["in"][YEARS[i]],
-            "out":st.session_state["prueba"]["out"][YEARS[i]]
+            "in":st.session_state["finances"]["in"][YEARS[i]],
+            "out":st.session_state["finances"]["out"][YEARS[i]]
         }
 
         # Crea el dataframe con los ingresos y gastos de ese año
