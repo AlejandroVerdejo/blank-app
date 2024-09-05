@@ -387,27 +387,36 @@ finances_yearly_tab_col1.bar_chart(yearly_data["in"],color="#2fde5d")
 finances_yearly_tab_col2.bar_chart(yearly_data["out"],color="#de2f2f")
 
 finances_yearly_tab.subheader("Balance")
-# finances_monthly_tab.subheader("Balance")
 
+# Añade el grafico de lineas con los ingresos y gastos anuales
 finances_yearly_tab.line_chart(dtf_yearly_data,color=["#2fde5d","#de2f2f"])
+
 with finances_monthly_tab:
+    # Crea los tabs para cada año en el tab de finanzas mensuales
     tabs = st.tabs(st.session_state["prueba"]["in"].keys())
     for i in range(0,len(tabs)):
+        # Guarda los datos de los meses del año de ese tab
         selected_year_data = {
             "in":st.session_state["prueba"]["in"][YEARS[i]],
             "out":st.session_state["prueba"]["out"][YEARS[i]]
         }
 
+        # Crea el dataframe con los ingresos y gastos de ese año
         dtf_monthly_data = pd.DataFrame(
             selected_year_data,columns=["in","out"]
             # st.session_state[]    
         )
+        # Crea las columnas para los graficos de barras para ese año
         with tabs[i]:
             finances_monthly_tab_col1, finances_monthly_tab_col2 = st.columns(2)
+        # Añade el grafico de barras de Ingresos de ese año
         finances_monthly_tab_col1.bar_chart(selected_year_data["in"],color="#2fde5d")
+        # Añade el grafico de barras de Gastos de ese año
         finances_monthly_tab_col2.bar_chart(selected_year_data["out"],color="#de2f2f")
         
+        # Da nombre a las columnas del dataframe
         dtf_monthly_data.columns = ["1-Ingresos","2-Gastos"]
         tabs[i].subheader("Balance")
+        # Añade el grafico de lineas de los ingresos y gastos de ese año
         tabs[i].line_chart(dtf_monthly_data,x_label=YEARS[i],color=["#2fde5d","#de2f2f"])
 
