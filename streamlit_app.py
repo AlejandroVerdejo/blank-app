@@ -371,9 +371,9 @@ with finances_monthly_tab:
         with tabs[i]:
             finances_monthly_tab_col1, finances_monthly_tab_col2 = st.columns(2)
         # Añade el grafico de barras de Ingresos de ese año
-        finances_monthly_tab_col1.bar_chart(selected_year_data["in"],color="#2fde5d",x_label="Ingresos")
+        finances_monthly_tab_col1.bar_chart(selected_year_data["in"],color="#2fde5d",x_label="Ingresos "+YEARS[i])
         # Añade el grafico de barras de Gastos de ese año
-        finances_monthly_tab_col2.bar_chart(selected_year_data["out"],color="#de2f2f",x_label="Gastos")
+        finances_monthly_tab_col2.bar_chart(selected_year_data["out"],color="#de2f2f",x_label="Gastos "+YEARS[i])
         
         # Da nombre a las columnas del dataframe
         dtf_monthly_data.columns = ["1-Ingresos","2-Gastos"]
