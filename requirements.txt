@@ -2,3 +2,4 @@ streamlit
 faker
 streamlit-tags
 plost
+google-cloud-firestore
