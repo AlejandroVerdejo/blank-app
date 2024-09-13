@@ -3,4 +3,3 @@ faker
 streamlit-tags
 plost
 plotly
-google-cloud-firestore
