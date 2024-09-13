@@ -181,6 +181,20 @@ if "show_sales" not in st.session_state:
 # Añade un boton a la segunda columna
 # col2.button("Tostada",on_click=tostada,use_container_width=True)
 
+# Create a DataFrame
+df = pd.DataFrame({
+    'Column1': ['Data1', 'Data2'],
+    'Column2': ['Data3', 'Data4'],
+})
+
+# Display the DataFrame with buttons
+for index, row in df.iterrows():
+    col1, col2, col3 = st.columns(3)
+    col1.text(row['Column1'])
+    col2.text(row['Column2'])
+    if col3.button('Button', key=index):
+        st.write(f'Button in row {index} clicked')
+
 st.header("Inventario")
 
 inventory_data_frame = pd.DataFrame(st.session_state["data"])
