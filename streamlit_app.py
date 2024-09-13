@@ -4,6 +4,7 @@ import altair as alt
 from faker import Faker
 import random
 import plotly.graph_objects as go
+from google.cloud import firestore
 
 # Configuracion de la pagina #! Siempre al principio
 st.set_page_config(
@@ -24,6 +25,19 @@ def tostada():
     st.toast("Tostadita")
 
 faker = Faker()
+
+# Authenticate to Firestore with the JSON account key.
+db = firestore.Client.from_service_account_json("firestore-key.json")
+
+# Create a reference to the Google post.
+doc_ref = db.collection("01").document("eP8H3RapRD7u3xu58vkJ")
+
+# Then get the data at that reference.
+doc = doc_ref.get()
+
+# Let's see what we got!
+st.write("The id is: ", doc.id)
+st.write("The contents are: ", doc.to_dict())
 
 YEARS = ["2020","2021","2022","2023"]
 
