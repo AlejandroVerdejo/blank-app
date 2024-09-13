@@ -4,7 +4,6 @@ import altair as alt
 from faker import Faker
 import random
 import plotly.graph_objects as go
-from google.cloud import firestore
 
 # Configuracion de la pagina #! Siempre al principio
 st.set_page_config(
