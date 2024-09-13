@@ -193,6 +193,7 @@ st.data_editor(inventory_data_frame,hide_index=True, use_container_width=True,co
     ),
     "units":st.column_config.NumberColumn(
         "Unidades",
+        format="%d uds.",
         help="Unidades en stock del producto",
         min_value=0,
         step=1,
