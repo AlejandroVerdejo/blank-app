@@ -12,6 +12,8 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
+st.page_link("3-test.py",label="Test", icon="🌎")
+
 faker = Faker()
 
 categories = ["alimento","ropa","medicina"]
@@ -32,7 +34,6 @@ if "data" not in st.session_state:
 
 st.title("Inventario")
 
-st.page_link("3-test.py",label="Test", icon="🌎")
 
 inventory_data_frame = pd.DataFrame(st.session_state["data"])
 
