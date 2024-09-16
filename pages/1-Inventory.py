@@ -32,6 +32,8 @@ if "data" not in st.session_state:
 
 st.title("Inventario")
 
+st.page_link("3-test.py",label="Test")
+
 inventory_data_frame = pd.DataFrame(st.session_state["data"])
 
 # Crea un dataFrame con los datos del inventario, ocultando el campo de index y dandole nombre a las columnas
