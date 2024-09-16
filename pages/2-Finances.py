@@ -131,12 +131,18 @@ if "finances" not in st.session_state:
         }    
     }
 
+if "colors" not in st.session_state:
+    st.session_state["colors"] = {
+        "in":"#2fde5d",
+        "out":"#de2f2f"
+    }
+
 st.title("Finanzas")
 
 # Abre un desplegable para cambiar los colores
 with st.popover("Colores"):
     # Cambia el color de Ingresos
-    in_color = st.color_picker("Ingresos", "#2fde5d")
+    in_color = st.color_picker("Ingresos", st.session_state["colors"]["in"])
     # Cambia el color de Gastos
     out_color = st.color_picker("Gastos", "#de2f2f")
 
