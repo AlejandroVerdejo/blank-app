@@ -133,8 +133,10 @@ if "finances" not in st.session_state:
 
 st.title("Finanzas")
 
+auxcol1,auxcol2 = st.columns(5,1)
+
 # Abre un desplegable para cambiar los colores
-with st.popover("Colores"):
+with auxcol2.popover("Colores"):
     # Cambia el color de Ingresos
     in_color = st.color_picker("Ingresos", "#2fde5d")
     # Cambia el color de Gastos
