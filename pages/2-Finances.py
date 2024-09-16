@@ -133,8 +133,12 @@ if "finances" not in st.session_state:
 
 st.title("Finanzas")
 
-in_color = st.color_picker("Ingresos", "#2fde5d")
-out_color = st.color_picker("Gastos", "#de2f2f")
+fin_color_col1, fin_color_col2 = st.columns(2)
+
+with fin_color_col1:
+    in_color = st.color_picker("Ingresos", "#2fde5d")
+with fin_color_col2:
+    out_color = st.color_picker("Gastos", "#de2f2f")
 
 # Crea los tabs para dividir las finanzas entre anuales y mensuales
 finances_yearly_tab, finances_monthly_tab = st.tabs(["Anual","Mensual"])
