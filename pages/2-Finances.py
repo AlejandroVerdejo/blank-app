@@ -172,14 +172,14 @@ with finances_yearly_tab:
     finances_yearly_tab_col1, finances_yearly_tab_col2 = st.columns(2)
 
 # Añade el grafico de barras de Ingresos anuales
-finances_yearly_tab_col1.bar_chart(yearly_data["in"],color=in_color,x_label="Ingresos")
+finances_yearly_tab_col1.bar_chart(yearly_data["in"],color=st.session_state["colors"]["in"],x_label="Ingresos")
 # Añade el grafico de barras de Gastos anuales
 finances_yearly_tab_col2.bar_chart(yearly_data["out"],color=out_color,x_label="Gastos")
 
 finances_yearly_tab.subheader("Balance")
 
 # Añade el grafico de lineas con los ingresos y gastos anuales
-finances_yearly_tab.line_chart(dtf_yearly_data,color=[in_color,out_color])
+finances_yearly_tab.line_chart(dtf_yearly_data,color=[st.session_state["colors"]["in"],out_color])
 
 with finances_monthly_tab:
     # Crea los tabs para cada año en el tab de finanzas mensuales
@@ -200,7 +200,7 @@ with finances_monthly_tab:
         with tabs[i]:
             finances_monthly_tab_col1, finances_monthly_tab_col2 = st.columns(2)
         # Añade el grafico de barras de Ingresos de ese año
-        finances_monthly_tab_col1.bar_chart(selected_year_data["in"],color=in_color,x_label="Ingresos "+YEARS[i])
+        finances_monthly_tab_col1.bar_chart(selected_year_data["in"],color=st.session_state["colors"]["in"],x_label="Ingresos "+YEARS[i])
         # Añade el grafico de barras de Gastos de ese año
         finances_monthly_tab_col2.bar_chart(selected_year_data["out"],color=out_color,x_label="Gastos "+YEARS[i])
         
@@ -208,4 +208,4 @@ with finances_monthly_tab:
         dtf_monthly_data.columns = ["1-Ingresos","2-Gastos"]
         tabs[i].subheader("Balance")
         # Añade el grafico de lineas de los ingresos y gastos de ese año
-        tabs[i].line_chart(dtf_monthly_data,x_label=YEARS[i],color=[in_color,out_color])
+        tabs[i].line_chart(dtf_monthly_data,x_label=YEARS[i],color=[st.session_state["colors"]["in"],out_color])
