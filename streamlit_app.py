@@ -12,18 +12,6 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-pages = {
-    "1-Inventario": [
-        st.Page("pages/1-Inventory.py",title="Inventario"),
-    ],
-    "2-Finanzas": [
-        st.Page("pages/1-Finances.py",title="Finanzas"),
-    ]
-}
-
-pg = st.navigation(pages)
-pg.run()
-
 # Crea un dialog para que el usuario introduzca datos
 @st.dialog("Cast your vote")
 def vote():
