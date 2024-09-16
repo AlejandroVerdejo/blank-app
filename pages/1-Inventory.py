@@ -6,11 +6,11 @@ import pandas as pd
 import plotly.graph_objects as go
 
 # Configuracion de la pagina #! Siempre al principio
-st.set_page_config(
-    page_title="Main page",
-    layout="wide",
-    initial_sidebar_state="expanded"
-)
+# st.set_page_config(
+#     page_title="Main page",
+#     layout="wide",
+#     initial_sidebar_state="expanded"
+# )
 
 st.page_link("3-test.py",label="Test", icon="🌎")
 
