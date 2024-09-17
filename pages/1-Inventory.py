@@ -84,7 +84,7 @@ st.data_editor(inventory_data_frame,hide_index=True, use_container_width=True,co
 
 options = st.multiselect("Categorias:",categories,categories)
 
-graph_inventory_data_frame = pd.DataFrame(st.session_state["data"], categories=categories)
+graph_inventory_data_frame = pd.DataFrame(st.session_state["data"])
 
 # Crea dos tabs para Existencias y Ventas
 inventory_tab_1,inventory_tab_2 = st.tabs(["Existencias","Ventas"])
