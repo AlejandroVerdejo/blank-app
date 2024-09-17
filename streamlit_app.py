@@ -354,4 +354,3 @@ with finances_monthly_tab:
         tabs[i].subheader("Balance")
         # Añade el grafico de lineas de los ingresos y gastos de ese año
         tabs[i].line_chart(dtf_monthly_data,x_label=YEARS[i],color=["#2fde5d","#de2f2f"])
-
