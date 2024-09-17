@@ -136,7 +136,7 @@ st.title("Finanzas")
 auxcol1,auxcol2 = st.columns((9,1))
 
 # Abre un desplegable para cambiar los colores
-with auxcol2.popover("Colores"):
+with auxcol2.popover("Colores",use_container_width=True):
     # Cambia el color de Ingresos
     in_color = st.color_picker("Ingresos", "#2fde5d")
     # Cambia el color de Gastos
