@@ -133,7 +133,7 @@ if "finances" not in st.session_state:
 
 st.title("Finanzas")
 
-auxcol1,auxcol2 = st.columns((9,1))
+auxcol1,auxcol2 = st.columns((8,1))
 
 # Abre un desplegable para cambiar los colores
 with auxcol2.popover("Colores",use_container_width=True):
