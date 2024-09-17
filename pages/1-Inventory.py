@@ -84,6 +84,8 @@ st.data_editor(inventory_data_frame,hide_index=True, use_container_width=True,co
 
 options = st.multiselect("Categorias:",categories,categories)
 
+graph_inventory_data_frame = pd.DataFrame(st.session_state["data"], index=options)
+
 # Crea dos tabs para Existencias y Ventas
 inventory_tab_1,inventory_tab_2 = st.tabs(["Existencias","Ventas"])
 
@@ -113,9 +115,9 @@ if count > 0:
 # Añade la tabla con las unidades de cada elemento al primer tab
 inventory_tab_1.altair_chart(
     # Muestra las unidades
-    alt.Chart(inventory_data_frame).mark_bar(orient="horizontal",color="#3b57e3").encode(alt.X("units",title=""),alt.Y("name",title=""))
+    alt.Chart(graph_inventory_data_frame).mark_bar(orient="horizontal",color="#3b57e3").encode(alt.X("units",title=""),alt.Y("name",title=""))
     # Muestra el punto de restock
-    +alt.Chart(inventory_data_frame).mark_point(shape="diamond",filled=True,size=50,color="red",opacity=1).encode(x="restock",y="name"),use_container_width=True
+    +alt.Chart(graph_inventory_data_frame).mark_point(shape="diamond",filled=True,size=50,color="red",opacity=1).encode(x="restock",y="name"),use_container_width=True
     )
 
 # Añade un radio al segundo tab para seleccionar si mostrara las ventas totales o del ultimo mes
@@ -130,7 +132,7 @@ else:
 
 # Mostrara las ventas de los productos, mostrando las totales o las del ultimo mes segun la variable de sesion #* Con grafico de barras
 inventory_tab_2.altair_chart(
-    alt.Chart(inventory_data_frame).mark_bar(orient="horizontal",color="#3b57e3").encode(alt.X(st.session_state["show_sales"],title=""),alt.Y("name",title="")),use_container_width=True
+    alt.Chart(graph_inventory_data_frame).mark_bar(orient="horizontal",color="#3b57e3").encode(alt.X(st.session_state["show_sales"],title=""),alt.Y("name",title="")),use_container_width=True
 )
 
 # Mostrara las ventas de los productos, mostrando las totales o las del ultimo mes segun la variable de sesion #* Con grafico de quesitos
