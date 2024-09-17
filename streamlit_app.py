@@ -181,7 +181,7 @@ if "show_sales" not in st.session_state:
 # Añade un boton a la segunda columna
 # col2.button("Tostada",on_click=tostada,use_container_width=True)
 
-st.header("Inventario :blue[prueba]")
+st.header("Inventario")
 
 inventory_data_frame = pd.DataFrame(st.session_state["data"])
 
