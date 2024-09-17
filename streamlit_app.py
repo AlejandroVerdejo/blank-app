@@ -247,7 +247,7 @@ for i in st.session_state["data"]:
 # En caso de elementos con menos unidades que numero de restock, mostrara un aviso indicando cuantos elementos hay y la informacion de cada uno
 if count > 0:
     if count == 1:
-        restock_warning = f"Hay {count} elemento por debajo del numero de restock"
+        restock_warning = f"Hay {count} elemento por debajo del :blue[numero] de restock"
         with inventory_tab_1.expander(restock_warning):
             for i in st.session_state["data"]:
                 if i["restock"] > i["units"]:
