@@ -27,7 +27,7 @@ if "data" not in st.session_state:
             "restock":random.randrange(1,100),
             "l_sales":last_month_sales,
             "t_sales":random.randrange(last_month_sales,500),
-            "category":random.choice(categories)
+            "index":random.choice(categories)
         })
 
 st.title("Inventario")
@@ -74,7 +74,7 @@ st.data_editor(inventory_data_frame,hide_index=True, use_container_width=True,co
         step=1,
         disabled=True
     ),
-    "category":st.column_config.SelectboxColumn(
+    "index":st.column_config.SelectboxColumn(
         "Categoria",
         help="Categoria del producto",
         options=categories,
@@ -85,7 +85,7 @@ st.data_editor(inventory_data_frame,hide_index=True, use_container_width=True,co
 options = st.multiselect("Categorias:",categories,categories)
 
 # graph_inventory_data_frame = pd.DataFrame(st.session_state["data"])
-graph_inventory_data_frame = pd.DataFrame(st.session_state["data"]).filter(like="ropa", axis=3)
+graph_inventory_data_frame = pd.DataFrame(st.session_state["data"]).filter(like="ropa", axis=0)
 # graph_inventory_data_frame = pd.DataFrame(st.session_state["data"]).filter(like="16", axis=0)
 
 st.data_editor(graph_inventory_data_frame)
