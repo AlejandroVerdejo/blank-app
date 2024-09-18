@@ -3,3 +3,4 @@ faker
 streamlit-tags
 plost
 plotly
+st-gsheets-connection
