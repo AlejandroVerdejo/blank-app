@@ -21,7 +21,11 @@ conn = st.connection("gsheets", type=GSheetsConnection)
 #     worksheet="inventory"
 # )
 # conn = st.connection("gsheets", type=GSheetsConnection)
-df = conn.read(worksheet="inventory")
+df = conn.read(
+    worksheet="inventory",
+    usecols=[0, 1],
+    nrows=3,
+)
 
 # Print results.
 for row in df.itertuples():
