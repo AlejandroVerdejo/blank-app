@@ -15,21 +15,21 @@ st.set_page_config(
 
 # Crea una conexion con la base de datos (GoogleSheet)
 # conn = st.connection(spreadsheet="https://docs.google.com/spreadsheets/d/1u9tYEHSsOnzZdVIalTaQyEVlw5wEBa1mBZDCqsi7IMQ/edit?usp=sharing", type=GSheetsConnection)
-conn = st.connection("gsheets", type=GSheetsConnection)
+# conn = st.connection("gsheets", type=GSheetsConnection)
 # st.write(conn._connection_name)
 # inventory_data = conn.read(
 #     worksheet="inventory"
 # )
 # conn = st.connection("gsheets", type=GSheetsConnection)
-df = conn.read(
-    worksheet="inventory",
-    usecols=[0, 1],
-    nrows=3,
-)
+# df = conn.read(
+#     worksheet="inventory",
+#     usecols=[0, 1],
+#     nrows=3,
+# )
 
 # Print results.
-for row in df.itertuples():
-    st.write(f"{row.name} has :{row.units}:")
+# for row in df.itertuples():
+#     st.write(f"{row.name} has :{row.units}:")
 
 faker = Faker()
 
