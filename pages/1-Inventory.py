@@ -13,6 +13,9 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
+# Crea una conexion con la base de datos (GoogleSheet)
+conn = st.connection("https://docs.google.com/spreadsheets/d/1u9tYEHSsOnzZdVIalTaQyEVlw5wEBa1mBZDCqsi7IMQ/edit?usp=sharing", type=GSheetsConnection)
+
 faker = Faker()
 
 categories = ["alimento","ropa","medicina"]
