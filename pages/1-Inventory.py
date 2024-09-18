@@ -16,6 +16,10 @@ st.set_page_config(
 # Crea una conexion con la base de datos (GoogleSheet)
 conn = st.connection("https://docs.google.com/spreadsheets/d/1u9tYEHSsOnzZdVIalTaQyEVlw5wEBa1mBZDCqsi7IMQ/edit?usp=sharing", type=GSheetsConnection)
 
+inventory_data = conn.read(
+    worksheet="inventory"
+)
+
 faker = Faker()
 
 categories = ["alimento","ropa","medicina"]
