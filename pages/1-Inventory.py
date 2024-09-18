@@ -30,6 +30,7 @@ if "data" not in st.session_state:
             "category":random.choice(categories)
         })
 
+
 st.title("Inventario")
 
 
@@ -85,9 +86,17 @@ st.data_editor(inventory_data_frame,hide_index=True, use_container_width=True,co
 options = st.multiselect("Categorias:",categories,categories)
 
 # graph_inventory_data_frame = pd.DataFrame(st.session_state["data"])
-graph_inventory_data_frame = pd.DataFrame(st.session_state["data"],index=categories).filter(like="ropa", axis=0)
+# graph_inventory_data_frame = pd.DataFrame(st.session_state["data"],index=categories).filter(like="ropa", axis=0)
 # graph_inventory_data_frame = pd.DataFrame(st.session_state["data"]).filter(like="16", axis=0)
 
+def category_filter(inventory):
+    filtered_inventory = []
+    for item in inventory:
+        if item["category"] in options:
+            filtered_inventory.append(item)
+    return filtered_inventory
+
+graph_inventory_data_frame = pd.DataFrame(category_filter(st.session_state["data"]))
 st.data_editor(graph_inventory_data_frame)
 
 # Crea dos tabs para Existencias y Ventas
