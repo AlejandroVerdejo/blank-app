@@ -4,6 +4,7 @@ from faker import Faker
 import altair as alt
 import pandas as pd
 import plotly.graph_objects as go
+from streamlit_gsheets import GSheetsConnection
 
 # Configuracion de la pagina #! Siempre al principio
 st.set_page_config(
