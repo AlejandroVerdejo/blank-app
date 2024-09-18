@@ -23,6 +23,7 @@ conn = st.connection("gsheets", type=GSheetsConnection)
 # conn = st.connection("gsheets", type=GSheetsConnection)
 df = conn.read(
     worksheet="inventory",
+    ttl="10m",
     usecols=[0, 1],
     nrows=3,
 )
