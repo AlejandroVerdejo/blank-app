@@ -83,21 +83,21 @@ st.data_editor(inventory_data_frame,hide_index=True, use_container_width=True,co
     )
 })
 
+# Crea un selector para elegir las categorias que se muestren en los graficos
 options = st.multiselect("Categorias:",categories,categories)
 
-# graph_inventory_data_frame = pd.DataFrame(st.session_state["data"])
-# graph_inventory_data_frame = pd.DataFrame(st.session_state["data"],index=categories).filter(like="ropa", axis=0)
-# graph_inventory_data_frame = pd.DataFrame(st.session_state["data"]).filter(like="16", axis=0)
-
+# Filtra los datos del inventario para sacar unicamente los de las categorias seleccionadas
 def category_filter(inventory):
+    # Lista en la que se añadiran los datos filtrados
     filtered_inventory = []
     for item in inventory:
+        # Si la categoria se encuentra en las seleccionadas
         if item["category"] in options:
             filtered_inventory.append(item)
     return filtered_inventory
 
+# Crea el DataFrame con los datos filtrados para los graficos
 graph_inventory_data_frame = pd.DataFrame(category_filter(st.session_state["data"]))
-st.data_editor(graph_inventory_data_frame)
 
 # Crea dos tabs para Existencias y Ventas
 inventory_tab_1,inventory_tab_2 = st.tabs(["Existencias","Ventas"])
