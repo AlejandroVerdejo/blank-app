@@ -138,7 +138,7 @@ inventory_tab_1.altair_chart(
 
 # Añade un radio al segundo tab para seleccionar si mostrara las ventas totales o del ultimo mes
 with inventory_tab_2:
-    sales_radio = st.radio(label="",options=["Ultimo mes","Totales"],horizontal=True)
+    sales_radio = st.radio(label="",options=["Ultimo mes","Totales"],horizontal=True, label_visibility="collapsed")
 
 # Cambia la variable de sesion segun el radio
 if sales_radio == "Ultimo mes":
