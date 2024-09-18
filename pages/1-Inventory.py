@@ -113,14 +113,14 @@ if count > 0:
     if count == 1:
         restock_warning = f"Hay {count} elemento por debajo del numero de restock"
         with inventory_tab_1.expander(restock_warning):
-            for i in st.session_state["data"]:
+            for i in category_filter(st.session_state["data"]):
                 if i["restock"] > i["units"]:
                     item_restock_warning = " ·~ " + i["name"] + " - " + str(i["units"]) + " unidades (" + str(i["restock"]) + ")."
                     st.write(item_restock_warning)
     else:
         restock_warning = f"Hay {count} elementos por debajo del numero de restock"
         with inventory_tab_1.expander(restock_warning):
-            for i in st.session_state["data"]:
+            for i in category_filter(st.session_state["data"]):
                 if i["restock"] > i["units"]:
                     item_restock_warning = " ·~ " + i["name"] + " - " + str(i["units"]) + " unidades (" + str(i["restock"]) + ")."
                     st.write(item_restock_warning)
