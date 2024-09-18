@@ -21,7 +21,7 @@ conn = st.connection("https://docs.google.com/spreadsheets/d/1u9tYEHSsOnzZdVIalT
 # )
 # conn = st.connection("gsheets", type=GSheetsConnection)
 
-df = conn.read()
+df = conn.read(worksheet="inventory")
 
 # Print results.
 for row in df.itertuples():
