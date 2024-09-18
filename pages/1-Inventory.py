@@ -96,15 +96,18 @@ def category_filter(inventory):
             filtered_inventory.append(item)
     return filtered_inventory
 
+# Lista con los datos filtrados por categoria
+filtered_inventory = category_filter(st.session_state["data"])
+
 # Crea el DataFrame con los datos filtrados para los graficos
-graph_inventory_data_frame = pd.DataFrame(category_filter(st.session_state["data"]))
+graph_inventory_data_frame = pd.DataFrame(filtered_inventory)
 
 # Crea dos tabs para Existencias y Ventas
 inventory_tab_1,inventory_tab_2 = st.tabs(["Existencias","Ventas"])
 
 # Cuenta los elementos con menos unidades del numero de restock indicado
 count = 0
-for i in st.session_state["data"]:
+for i in filtered_inventory:
     if i["restock"] > i["units"]:
         count += 1
 
@@ -113,14 +116,14 @@ if count > 0:
     if count == 1:
         restock_warning = f"Hay {count} elemento por debajo del numero de restock"
         with inventory_tab_1.expander(restock_warning):
-            for i in category_filter(st.session_state["data"]):
+            for i in filtered_inventory:
                 if i["restock"] > i["units"]:
                     item_restock_warning = " ·~ " + i["name"] + " - " + str(i["units"]) + " unidades (" + str(i["restock"]) + ")."
                     st.write(item_restock_warning)
     else:
         restock_warning = f"Hay {count} elementos por debajo del numero de restock"
         with inventory_tab_1.expander(restock_warning):
-            for i in category_filter(st.session_state["data"]):
+            for i in filtered_inventory:
                 if i["restock"] > i["units"]:
                     item_restock_warning = " ·~ " + i["name"] + " - " + str(i["units"]) + " unidades (" + str(i["restock"]) + ")."
                     st.write(item_restock_warning)
