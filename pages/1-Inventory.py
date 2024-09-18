@@ -33,7 +33,7 @@ st.set_page_config(
 
 faker = Faker()
 
-categories = ["alimento","ropa","medicina"]
+categories = ["Alimento","Ropa","Medicina"]
 
 if "data" not in st.session_state:
     st.session_state["data"] = []
